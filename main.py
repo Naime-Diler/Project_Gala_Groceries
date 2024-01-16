@@ -15,7 +15,7 @@ def get_data():
 
 @st.cache_data
 def get_data1():
-    df_stock = pd.read_csv("C:/Users\Naime Diler/Desktop/PycharmProjects/DS Final Project - Gala/sensor_stock_levels.csv")
+    df_stock = pd.read_csv("C:/Users/Naime Diler/Desktop/PycharmProjects/DS Final Project - Gala/sensor_stock_levels.csv")
     return df_stock
 
 
