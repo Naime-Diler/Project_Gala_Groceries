@@ -21,7 +21,7 @@ def get_data1():
 
 @st.cache_data
 def get_data2():
-    df_temp = pd.read_csv("./DS Final Project - Gala/sensor_storage_temperature.csv")
+    df_temp = pd.read_csv(r"C:\Users\Naime Diler\Desktop\PycharmProjects\DS Final Project - Gala\sensor_storage_temperature.csv")
     return df_temp
 
 
@@ -42,7 +42,7 @@ column_bir.markdown("**Leyla Hanım**, Almanya'daki Gala Süpermarketleri'nin ş
 
 
 
-column_bir.image("DS Final Project - Gala/WhatsApp Bild 2024-01-11 um 12.14.47_dd58d66a.jpg", width=820)
+column_bir.image("./DS Final Project - Gala/WhatsApp Bild 2024-01-11 um 12.14.47_dd58d66a.jpg", width=820)
 column_bir.markdown("https://galasupermarkets.com/")
 
 
