@@ -324,7 +324,7 @@ tab_vis.plotly_chart(fig)
 
 # Tab Model
 def get_model():
-    model = joblib.load(r"C:\Users\Naime Diler\Desktop\PycharmProjects\DS Final Project - Gala\final_model_bys.joblib")
+    model = joblib.load("final_model_bys.joblib")
     return model
 
 model = get_model()
