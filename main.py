@@ -4,7 +4,6 @@ import pandas as pd
 import plotly.express as px
 import joblib
 
-# önce Terminal e sunu calistir: streamlit run "C:\Users\Naime Diler\Desktop\PycharmProjects\DS Final Project - Gala\main.py"
 
 st.set_page_config(layout="wide")
 
