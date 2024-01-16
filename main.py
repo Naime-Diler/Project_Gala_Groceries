@@ -15,13 +15,13 @@ def get_data():
 
 @st.cache_data
 def get_data1():
-    df_stock = pd.read_csv(r"C:\Users\Naime Diler\Desktop\PycharmProjects\DS Final Project - Gala\sensor_stock_levels.csv")
+    df_stock = pd.read_csv("C:/Users\Naime Diler/Desktop/PycharmProjects/DS Final Project - Gala/sensor_stock_levels.csv")
     return df_stock
 
 
 @st.cache_data
 def get_data2():
-    df_temp = pd.read_csv(r"C:\Users\Naime Diler\Desktop\PycharmProjects\DS Final Project - Gala\sensor_storage_temperature.csv")
+    df_temp = pd.read_csv("C:/Users/Naime Diler/Desktop/PycharmProjects/DS Final Project - Gala/sensor_storage_temperature.csv")
     return df_temp
 
 
