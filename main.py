@@ -10,7 +10,7 @@ st.set_page_config(layout="wide")
 
 @st.cache_data
 def get_data():
-    df = pd.read_csv(r"C:\Users\Naime Diler\Desktop\PycharmProjects\DS Final Project - Gala\sample_sales_data.csv") 
+    df = pd.read_csv("C:/Users/Naime Diler/Desktop/PycharmProjects/DS Final Project - Gala/sample_sales_data.csv") 
     return df
 
 @st.cache_data
