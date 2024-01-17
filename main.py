@@ -34,8 +34,6 @@ tab_home, tab_data, tab_vis, tab_model = st.tabs(["Homepage", "Datasets", "Chart
 column_bir, column_iki = tab_home.columns(2, gap="large")
 
 
-
-column_bir.markdown(" :orange[Betül Karagöz, Bilal Özdemir, Cemil Öksüz, Ercan Tayfun, Naime Diler]")
 column_bir.subheader("Gala Süpermarketleri'nde Stok Yönetimi")
 column_bir.markdown("**Leyla Hanım**, Almanya'daki Gala Süpermarketleri'nin şube sorumlusu olarak görev yapıyor. Gala Süpermarketleri, teknoloji odaklı bir market zinciri olup, müşterilere en kaliteli ve taze ürünleri sunma amacı gütmektedir. Leyla Hanım, stok yönetimi sorunlarıyla başa çıkmak ve ürünleri daha iyi stoklamak için bize başvurdu.")
 
@@ -52,6 +50,24 @@ column_bir.markdown("Bu adımların sonunda, stok yönetimini etkileyen unsurlar
 
 column_iki.image("WhatsApp Bild 2024-01-11 um 12.14.47_dd58d66a.jpg", width=820)
 column_iki.markdown("https://galasupermarkets.com/")
+
+
+column_bir.markdown("<br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
+
+
+def create_linked_profiles(profiles):
+    columns = column_bir.columns(len(profiles))
+
+    for column, (name, linkedin_url) in zip(columns, profiles):
+        column.markdown(f'[**{name}**]({linkedin_url})')
+
+# Beispielaufruf für Naime Diler und Betül Karagöz
+profiles = [("Betül Karagöz", "https://www.linkedin.com/in/betül-karagöz/"),
+            ("Cemil Öksüz", "https://www.linkedin.com/in/cemil-oksuz/"),
+            ("Ercan Tayfun", "https://www.linkedin.com/in/e-tayfun/"),
+            ("Naime Diler", "https://www.linkedin.com/in/naime-diler/")]
+
+create_linked_profiles(profiles)
 
 
 # Tab Data
