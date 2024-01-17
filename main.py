@@ -41,19 +41,17 @@ column_bir.markdown("**Leyla Hanım**, Almanya'daki Gala Süpermarketleri'nin ş
 
 
 
-column_bir.image("WhatsApp Bild 2024-01-11 um 12.14.47_dd58d66a.jpg", width=820)
-column_bir.markdown("https://galasupermarkets.com/")
+column_bir.subheader("Veri Bilimi ile Stok Yönetimi Optimizasyonu: Adımlar ve Sonuçlar")
+column_bir.markdown("1- Problem Tanımı")
+column_bir.markdown("2- Veri Seti Toplama ve Sentezleme")
+column_bir.markdown("3- Veri Hazırlığı ve Temizleme")
+column_bir.markdown("4- Model Geliştirme ve Test Etme")
+column_bir.markdown("5- Sonuçların İletimi")
+column_bir.markdown("Bu adımların sonunda, stok yönetimini etkileyen unsurları belirledik ve elde ettiğimiz verileri temizleyip analize uygun hale getirdik. Önerdiğimiz modellerle stok yönetimini optimize etmeye yönelik stratejiler geliştirdik ve eksik veri olmaması, elde ettiğimiz verinin güvenilirliğini gösterdi.")
 
 
-
-column_iki.subheader("Veri Bilimi ile Stok Yönetimi Optimizasyonu: Adımlar ve Sonuçlar")
-column_iki.markdown("1- Problem Tanımı")
-column_iki.markdown("2- Veri Seti Toplama ve Sentezleme")
-column_iki.markdown("3- Veri Hazırlığı ve Temizleme")
-column_iki.markdown("4- Model Geliştirme ve Test Etme")
-column_iki.markdown("5- Sonuçların İletimi")
-column_iki.markdown("Bu adımların sonunda, stok yönetimini etkileyen unsurları belirledik ve elde ettiğimiz verileri temizleyip analize uygun hale getirdik. Önerdiğimiz modellerle stok yönetimini optimize etmeye yönelik stratejiler geliştirdik ve eksik veri olmaması, elde ettiğimiz verinin güvenilirliğini gösterdi.")
-
+column_iki.image("WhatsApp Bild 2024-01-11 um 12.14.47_dd58d66a.jpg", width=820)
+column_iki.markdown("https://galasupermarkets.com/")
 
 
 # Tab Data
@@ -335,7 +333,7 @@ model = get_model()
 
 quantity_original = tab_model.number_input("Enter Quantity", min_value = 1, max_value = 4, step=1 ,value = 1)
 temp_category = tab_model.number_input("Enter Category :  1: (-36°C to -16°C) # 2: (-16°C to 0°C) # 3: (0°C to 15°C) # 4: (15°C to 19°C) # 5: (19°C to 36°C)", min_value = 1, max_value = 5, step=1 ,value = 1)
-temperature = tab_model.number_input("Enter Temperature : Attention: Enter the temperature suitable for the category you selected", min_value = -36, max_value = 36, step=1 ,value = 0)
+temperature = tab_model.number_input("Enter Temperature : Attention: Enter the temperature suitable for the category you selected!", min_value = -36, max_value = 36, step=1 ,value = 0)
 unit_price = tab_model.number_input("Enter Unit Price", min_value = 0.0, max_value = 24.0, step=0.01 ,value = 0.0)
 day = tab_model.number_input("Enter Day: (0: Tuesday) # (1: Wednesday) # (2: Thursday) # (3: Friday) # (4: Saturday) # (5: Sunday) # (6: Monday)", min_value = 0, max_value = 6, step=1, value = 0)
 hour = tab_model.number_input("Enter Hour", min_value = 9, max_value = 19, step=1 ,value = 9)
