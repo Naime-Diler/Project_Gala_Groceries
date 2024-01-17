@@ -63,6 +63,7 @@ def create_linked_profiles(profiles):
 
 # Beispielaufruf für Naime Diler und Betül Karagöz
 profiles = [("Betül Karagöz", "https://www.linkedin.com/in/betül-karagöz/"),
+            ("Bilal Özdemir", "https://www.linkedin.com/in/bilal-%C3%B6zdemir-0a5b58287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"),
             ("Cemil Öksüz", "https://www.linkedin.com/in/cemil-oksuz/"),
             ("Ercan Tayfun", "https://www.linkedin.com/in/e-tayfun/"),
             ("Naime Diler", "https://www.linkedin.com/in/naime-diler/")]
@@ -113,7 +114,7 @@ column1_bir.dataframe(sales, width=900)
 column1_iki.subheader("Sensor_Stock_Levels")
 column1_iki.dataframe(stock, width=900)
 
-column1_iki.subheader("Sensor_Stock_Levels")
+column1_iki.subheader("Sensor_Storage_Temperature")
 column1_iki.dataframe(temp, width=900)
 
 
