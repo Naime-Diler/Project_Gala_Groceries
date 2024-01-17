@@ -52,7 +52,7 @@ column_iki.image("WhatsApp Bild 2024-01-11 um 12.14.47_dd58d66a.jpg", width=820)
 column_iki.markdown("https://galasupermarkets.com/")
 
 
-column_bir.markdown("<br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
+column_bir.markdown("<br><br><br><br><br><br><br>", unsafe_allow_html=True)
 
 
 def create_linked_profiles(profiles):
