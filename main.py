@@ -25,7 +25,7 @@ def get_data2():
 
 
 
-st.header(" :blue[Gala Groceries Project: Estimation of product stock for a market]")
+st.header(" :green[Gala Groceries Project: Estimation of product stock for a market]")
 tab_home, tab_data, tab_vis, tab_model = st.tabs(["Homepage", "Datasets", "Charts", "Model"])
 
 # Tab home
@@ -36,7 +36,7 @@ column_bir, column_iki = tab_home.columns(2, gap="large")
 
 
 column_bir.markdown(" :orange[Betül Karagöz, Bilal Özdemir, Cemil Öksüz, Ercan Tayfun, Naime Diler]")
-column_bir.subheader("Gala Süpermarketleri'nde Stok Yönetimi: Leyla Hanım'ın Hikayesi")
+column_bir.subheader("Gala Süpermarketleri'nde Stok Yönetimi")
 column_bir.markdown("**Leyla Hanım**, Almanya'daki Gala Süpermarketleri'nin şube sorumlusu olarak görev yapıyor. Gala Süpermarketleri, teknoloji odaklı bir market zinciri olup, müşterilere en kaliteli ve taze ürünleri sunma amacı gütmektedir. Leyla Hanım, stok yönetimi sorunlarıyla başa çıkmak ve ürünleri daha iyi stoklamak için bize başvurdu.")
 
 
@@ -63,16 +63,14 @@ column1_bir.markdown("* transaction_id = this is a unique ID that is assigned to
 
 
 df = get_data()
+df_stock = get_data1()
+df_temp = get_data2()
 
-# Grafik 1 icin:
+
+
+# for chart 1:
 count_df = df.category.value_counts().reset_index()
 count_df.columns = ["category", "count"]
-
-
-df_stock = get_data1()
-
-
-df_temp = get_data2()
 
 
 
@@ -94,8 +92,14 @@ for df in [sales, stock, temp]:
   df['day'] = df['timestamp'].dt.day
   df['hour'] = df['timestamp'].dt.hour
 
+
+column1_bir.subheader("Sample_Sales_Data")
 column1_bir.dataframe(sales, width=900)
+
+column1_iki.subheader("Sensor_Stock_Levels")
 column1_iki.dataframe(stock, width=900)
+
+column1_iki.subheader("Sensor_Stock_Levels")
 column1_iki.dataframe(temp, width=900)
 
 
@@ -229,6 +233,7 @@ fig.update_layout(xaxis_title="Hour", yaxis_title="Estimated_stock_pct", legend_
 
 tab_vis.plotly_chart(fig)
 
+
 #tab_vis.subheader("Chart 8")
 
 # Hourly Stock Estimated Stock Percentage by Category
@@ -329,8 +334,8 @@ def get_model():
 model = get_model()
 
 quantity_original = tab_model.number_input("Enter Quantity", min_value = 1, max_value = 4, step=1 ,value = 1)
-temperature = tab_model.number_input("Enter Temperature : between -36°C and 36°C", min_value = -36, max_value = 36, step=1 ,value = 0)
 temp_category = tab_model.number_input("Enter Category :  1: (-36°C to -16°C) # 2: (-16°C to 0°C) # 3: (0°C to 15°C) # 4: (15°C to 19°C) # 5: (19°C to 36°C)", min_value = 1, max_value = 5, step=1 ,value = 1)
+temperature = tab_model.number_input("Enter Temperature : Attention: Enter the temperature suitable for the category you selected", min_value = -36, max_value = 36, step=1 ,value = 0)
 unit_price = tab_model.number_input("Enter Unit Price", min_value = 0.0, max_value = 24.0, step=0.01 ,value = 0.0)
 day = tab_model.number_input("Enter Day: (0: Tuesday) # (1: Wednesday) # (2: Thursday) # (3: Friday) # (4: Saturday) # (5: Sunday) # (6: Monday)", min_value = 0, max_value = 6, step=1, value = 0)
 hour = tab_model.number_input("Enter Hour", min_value = 9, max_value = 19, step=1 ,value = 9)
