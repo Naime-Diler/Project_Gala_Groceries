@@ -452,7 +452,7 @@ if tab_model.button("Predict!"):
 # Tab About:
 
 tab_about.subheader("HAKKIMIZDA")
-tab_about.markdown("euroTech Study &Miuul Data Science and Machine Learning Bootcamp katılımcıları olarak, veri bilimi\n"
+tab_about.markdown("euroTech Study & Miuul Data Science and Machine Learning Bootcamp katılımcıları olarak, veri bilimi\n"
                    "ve makine öğrenimi dünyasına adım atmak amacıyla bir araya geldik. Eğitim süresince gerçek dünya\n"
                    "projeleri üzerinde çalışarak edindiğimiz bilgileri pekiştirdik. Bootcamp programının sonunda\n"
                    "sunduğumuz bu proje ile bu önemli süreci tamamlıyoruz. Kazandığımız bilgi ve deneyimle, geleceğin\n"
