@@ -47,16 +47,20 @@ eurotech_url = "https://www.eurotech-gmbh.eu/"
 
 
 
-# Versuch2:
-def create_link(text, url):
-    return f'<a href="{url}" target="_blank">{text}</a>'
+# Versuch2
 
-# Link-Texte
-miuul_link_text = "Miuul"
-eurotech_link_text = "euroTech GmbH"
+def open_website(url):
+    st.markdown(f'<a href="{url}" target="_blank"><button>{url}</button></a>', unsafe_allow_html=True)
 
-column_2.markdown(create_link(miuul_link_text, miuul_url), unsafe_allow_html=True)
-column_2.markdown(create_link(eurotech_link_text, eurotech_url), unsafe_allow_html=True)
+# Buttons für die Websites nebeneinander anzeigen
+col1, col2 = column_2.columns(2)
+
+if col1.button("Miuul"):
+    open_website(miuul_url)
+
+if col2.button("euroTech GmbH"):
+    open_website(eurotech_url)
+
 
 
 
