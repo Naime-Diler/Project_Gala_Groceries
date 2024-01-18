@@ -76,7 +76,7 @@ eurotech_url = "https://www.eurotech-gmbh.eu/"
 #col2.markdown(create_link_button("euroTech GmbH", eurotech_url), unsafe_allow_html=True)
 
 
-Versuch 4:
+#Versuch 4:
 
 # JavaScript zum Umleiten
 redirect_script = """
