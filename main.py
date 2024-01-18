@@ -34,18 +34,37 @@ tab_home, tab_data, tab_vis, tab_model = st.tabs(["Homepage", "Datasets", "Chart
 column_bir, column_iki = tab_home.columns(2, gap="large")
 
 
-column_bir.subheader("Gala Süpermarketleri'nde Stok Yönetimi")
-column_bir.markdown("**Leyla Hanım**, Almanya'daki Gala Süpermarketleri'nin şube sorumlusu olarak görev yapıyor. Gala Süpermarketleri, teknoloji odaklı bir market zinciri olup, müşterilere en kaliteli ve taze ürünleri sunma amacı gütmektedir. Leyla Hanım, stok yönetimi sorunlarıyla başa çıkmak ve ürünleri daha iyi stoklamak için bize başvurdu.")
+column_bir.markdown("Gala Süpermarketleri olarak, teknoloji odaklı bir market zinciri olarak sürekli gelişen ve\n"
+                    "yeniliklere açık bir yaklaşım benimsemekteyiz. Leyla Hanım, Almanya’daki Gala Süpermarketleri\n"
+                    " mağazasının şube sorumlusu olarak, müşterilere en kaliteli ve taze ürünleri sunma çabası içinde\n"
+                    "olan bir liderdir.")
+column_bir.markdown("Veri bilimi ve makine öğrenimiyle desteklenen bir projeyle karşılaştığımızda, Leyla Hanım'ın\n"
+                    " tedarik zinciri sorunlarına çözüm üretme konusundaki isteği bizi heyecanlandırdı. Bu proje\n"
+                    " kapsamında, satış verileri, sensörlerden gelen stok durumu verileri ve depolardaki sıcaklık\n"
+                    " değerleri gibi önemli veri setlerini analiz ederek,\n ürün stoklamayı optimize etme hedefine\n "
+                    "odaklandık.")
+
+column_bir.subheader("Proje Hedefi")
+column_bir.markdown("Tedarikçilerimizden daha akıllıca ürün tedarik edebilmek için saatlik satış verileri ve sensor\n"
+                    "verilerine dayanarak ürünlerin en optimum seviyede stoklanmasını sağlamak.")
+
+column_bir.subheader("Veri Seti ve Analiz Süreci")
+column_bir.markdown("Bu hedefe ulaşmak için, kasalardaki satış bilgileri, ürün stok miktarı ve sensörler tarafından\n"
+                    "ölçülen sıcaklık değerlerini içeren üç ayrı veri setini entegre ettik. Veri hazırlığı ve temizleme\n"
+                    "aşamasında, anormallikleri düzelttik ve analize uygun hale getirdik.")
+
+column_bir.subheader("Model Geliştirme ve Test Etme")
+column_bir.markdown("Projenin kritik aşamalarından biri, belirlenen faktörlerle stok yönetimi arasındaki ilişkiyi\n"
+                    "değerlendirmek için veri bilimi modelleri geliştirmekti. Aykırı değer analizi, standartlaştırma\n"
+                    "ve Scikit-learn kütüphanesi kullanılarak regresyon modelleri oluşturduk. En iyi uyan modelleri\n"
+                    "belirlemek için Light GBM gibi güçlü algoritmaları kullandık.")
 
 
+column_iki.markdown("Bu proje, Gala Süpermarketleri'nin tedarik zinciri süreçlerini daha etkili ve verimli bir şekilde\n"
+                    "yönetmesine yardımcı olacak. Leyla Hanım'ın liderliğindeki ekip, gelecekteki benzer zorluklara\n"
+                    "karşı daha iyi hazırlıklı olacak.")
 
-column_bir.subheader("Veri Bilimi ile Stok Yönetimi Optimizasyonu: Adımlar ve Sonuçlar")
-column_bir.markdown("1- Problem Tanımı")
-column_bir.markdown("2- Veri Seti Toplama ve Sentezleme")
-column_bir.markdown("3- Veri Hazırlığı ve Temizleme")
-column_bir.markdown("4- Model Geliştirme ve Test Etme")
-column_bir.markdown("5- Sonuçların İletimi")
-column_bir.markdown("Bu adımların sonunda, stok yönetimini etkileyen unsurları belirledik ve elde ettiğimiz verileri temizleyip analize uygun hale getirdik. Önerdiğimiz modellerle stok yönetimini optimize etmeye yönelik stratejiler geliştirdik ve eksik veri olmaması, elde ettiğimiz verinin güvenilirliğini gösterdi.")
+column_iki.markdown("<br><br>", unsafe_allow_html=True)
 
 
 column_iki.image("WhatsApp Bild 2024-01-11 um 12.14.47_dd58d66a.jpg", width=820)
