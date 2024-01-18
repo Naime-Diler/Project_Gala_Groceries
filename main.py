@@ -50,40 +50,8 @@ eurotech_url = "https://www.eurotech-gmbh.eu/"
 
 
 # Versuch2:
-#def open_website(url):
- #   column_2.markdown(f'<a href="{url}" target="_blank"><button>{url}</button></a>', unsafe_allow_html=True)
-
-#col1, col2 = column_2.columns(2)
-
-#if col1.button("Miuul"):
- #   open_website(miuul_url)
-
-#if col2.button("euroTech GmbH"):
- #   open_website(eurotech_url)
-
-
-
-
-# Versuch3
-
-#def open_website(url):
-#    column_2.markdown(f'<a href="{url}" target="_blank"><button>{url}</button></a>', unsafe_allow_html=True)
-
-#col1, col2 = column_2.columns(2)
-
-#if col1.button("Miuul"):
-#    open_website(miuul_url)
-
-#if col2.button("euroTech GmbH"):
- #   open_website(eurotech_url)
-
-
-# Versuch 4:
-
-
 def open_website(url):
     column_2.markdown(f'<a href="{url}" target="_blank"><button>{url}</button></a>', unsafe_allow_html=True)
-
 
 col1, col2 = column_2.columns(2)
 
@@ -92,6 +60,21 @@ if col1.button("Miuul"):
 
 if col2.button("euroTech GmbH"):
     open_website(eurotech_url)
+
+
+
+# Versuch3:
+#def open_website(url):
+#    column_2.markdown(f'<a href="{url}" target="_blank"><button>{url}</button></a>', unsafe_allow_html=True)
+
+
+#col1, col2 = column_2.columns(2)
+
+#if col1.button("Miuul"):
+ #   open_website(miuul_url)
+
+#if col2.button("euroTech GmbH"):
+ #   open_website(eurotech_url)
 
 
 
