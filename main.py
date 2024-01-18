@@ -32,16 +32,32 @@ column_1.header(" :green[Gala Groceries Project: Estimation of product stock for
 miuul_url = "https://www.miuul.com/"
 eurotech_url = "https://www.eurotech-gmbh.eu/"
 
-def open_website(url):
-    column_2.markdown(f'<a href="{url}" target="_blank"><button>{url}</button></a>', unsafe_allow_html=True)
+# Versuch1:
+#def open_website(url):
+ #   column_2.markdown(f'<a href="{url}" target="_blank"><button>{url}</button></a>', unsafe_allow_html=True)
 
-col1, col2 = column_2.columns(2)
+#col1, col2 = column_2.columns(2)
 
-if col1.button("Miuul"):
-    open_website(miuul_url)
+#if col1.button("Miuul"):
+ #   open_website(miuul_url)
 
-if col2.button("euroTech GmbH"):
-    open_website(eurotech_url)
+#if col2.button("euroTech GmbH"):
+ #   open_website(eurotech_url)
+
+
+
+
+# Versuch2:
+def create_link(text, url):
+    return f'<a href="{url}" target="_blank">{text}</a>'
+
+# Link-Texte
+miuul_link_text = "Miuul"
+eurotech_link_text = "euroTech GmbH"
+
+column_2.markdown(create_link(miuul_link_text, miuul_url), unsafe_allow_html=True)
+column_2.markdown(create_link(eurotech_link_text, eurotech_url), unsafe_allow_html=True)
+
 
 
 
