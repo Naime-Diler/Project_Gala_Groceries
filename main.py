@@ -50,9 +50,8 @@ eurotech_url = "https://www.eurotech-gmbh.eu/"
 # Versuch2
 
 def open_website(url):
-    st.markdown(f'<a href="{url}" target="_blank"><button>{url}</button></a>', unsafe_allow_html=True)
+    column_1.markdown(f'<a href="{url}" target="_blank"><button>{url}</button></a>', unsafe_allow_html=True)
 
-# Buttons für die Websites nebeneinander anzeigen
 col1, col2 = column_2.columns(2)
 
 if col1.button("Miuul"):
