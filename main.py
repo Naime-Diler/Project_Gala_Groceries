@@ -26,7 +26,7 @@ def get_data2():
 
 
 st.header(" :green[Gala Groceries Project: Estimation of product stock for a market]")
-tab_home, tab_data, tab_vis, tab_model = st.tabs(["Homepage", "Datasets", "Charts", "Model"])
+tab_home, tab_data, tab_vis, tab_model, tab_about = st.tabs(["Homepage", "Datasets", "Charts", "Model", "About"])
 
 # Tab home
 # column_bir, column_iki = st.columns(2)
@@ -70,24 +70,6 @@ column_iki.markdown("<br><br>", unsafe_allow_html=True)
 column_iki.image("WhatsApp Bild 2024-01-11 um 12.14.47_dd58d66a.jpg", width=820)
 column_iki.markdown("https://galasupermarkets.com/")
 
-
-column_bir.markdown("<br><br><br><br><br><br><br>", unsafe_allow_html=True)
-
-
-def create_linked_profiles(profiles):
-    columns = column_bir.columns(len(profiles))
-
-    for column, (name, linkedin_url) in zip(columns, profiles):
-        column.markdown(f'[**{name}**]({linkedin_url})')
-
-# Beispielaufruf für Naime Diler und Betül Karagöz
-profiles = [("Betül Karagöz", "https://www.linkedin.com/in/betül-karagöz/"),
-            ("Bilal Özdemir", "https://www.linkedin.com/in/bilal-%C3%B6zdemir-0a5b58287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"),
-            ("Cemil Öksüz", "https://www.linkedin.com/in/cemil-oksuz/"),
-            ("Ercan Tayfun", "https://www.linkedin.com/in/e-tayfun/"),
-            ("Naime Diler", "https://www.linkedin.com/in/naime-diler/")]
-
-create_linked_profiles(profiles)
 
 
 # Tab Data
@@ -382,3 +364,38 @@ if tab_model.button("Predict!"):
     tab_model.success(f"Estimated Stock Status : {prediction[0]}")
     tab_model.balloons()
 
+
+# Tab About:
+
+tab_about.subheader("HAKKIMIZDA")
+tab_about.markdown("euroTech Study &Miuul Data Science and Machine Learning Bootcamp katılımcıları olarak, veri bilimi\n"
+                   "ve makine öğrenimi dünyasına adım atmak amacıyla bir araya geldik. Eğitim süresince gerçek dünya\n"
+                   "projeleri üzerinde çalışarak edindiğimiz bilgileri pekiştirdik. Bootcamp programının sonunda\n"
+                   "sunduğumuz bu proje ile bu önemli süreci tamamlıyoruz. Kazandığımız bilgi ve deneyimle, geleceğin\n"
+                   "veri bilimcileri olarak, bu alanda başarılı bir kariyere adım atmak için hazırız.")
+
+tab_about.markdown("<br>", unsafe_allow_html=True)
+
+tab_about.markdown("Bu seyahatte bizlere rehberlik eden ve destek sağlayan tüm eğitmenlere, mentörlere ve euroTech\n"
+                   "Study &Miuul ailesine içten teşekkürlerimizi sunuyoruz. Veri bilimi ve makine öğrenimi tutkunları\n"
+                   "olarak, elde ettiğimiz bu değerli bilgi ve becerileri, gelecekteki projelerde etkili bir şekilde\n"
+                   "kullanmak için sabırsızlıkla bekliyoruz.")
+
+
+
+tab_about.markdown("<br><br><br><br><br><br><br>", unsafe_allow_html=True)
+
+def create_linked_profiles(profiles):
+    columns = tab_about.columns(len(profiles))
+
+    for column, (name, linkedin_url) in zip(columns, profiles):
+        column.markdown(f'[**{name}**]({linkedin_url})')
+
+
+profiles = [("Betül Karagöz", "https://www.linkedin.com/in/betül-karagöz/"),
+            ("Bilal Özdemir", "https://www.linkedin.com/in/bilal-%C3%B6zdemir-0a5b58287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"),
+            ("Cemil Öksüz", "https://www.linkedin.com/in/cemil-oksuz/"),
+            ("Ercan Tayfun", "https://www.linkedin.com/in/e-tayfun/"),
+            ("Naime Diler", "https://www.linkedin.com/in/naime-diler/")]
+
+create_linked_profiles(profiles)
