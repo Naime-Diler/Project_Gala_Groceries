@@ -3,6 +3,7 @@ import pandas as pd
 # pip install plotly
 import plotly.express as px
 import joblib
+import webbrowser
 
 
 st.set_page_config(layout="wide")
@@ -24,8 +25,25 @@ def get_data2():
     return df_temp
 
 
+column_1, column_2 = st.columns([6, 1], gap="large")
+column_1.header(" :green[Gala Groceries Project: Estimation of product stock for a market]")
 
-st.header(" :green[Gala Groceries Project: Estimation of product stock for a market]")
+miuul_url = "https://miuul.com"
+eurotech_url = "https://www.eurotechstudy.com/public/de"
+
+def open_website(url):
+    webbrowser.open_new_tab(url)
+
+col1, col2 = column_2.columns(2)
+
+if col1.button("Miuul"):
+    open_website(miuul_url)
+
+if col2.button("euroTech GmbH"):
+    open_website(eurotech_url)
+
+
+
 tab_home, tab_data, tab_vis, tab_model, tab_about = st.tabs(["Homepage", "Datasets", "Charts", "Model", "About"])
 
 # Tab home
