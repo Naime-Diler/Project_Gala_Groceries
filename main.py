@@ -3,7 +3,6 @@ import pandas as pd
 # pip install plotly
 import plotly.express as px
 import joblib
-import webbrowser
 
 
 st.set_page_config(layout="wide")
