@@ -28,19 +28,21 @@ def get_data2():
 column_1, column_2 = st.columns([6, 1], gap="large")
 column_1.header(" :green[Gala Groceries Project: Estimation of product stock for a market]")
 
-miuul_url = "https://miuul.com"
-eurotech_url = "https://www.eurotechstudy.com/public/de"
 
-def open_website(url):
-    webbrowser.open_new_tab(url)
+miuul_url = "https://www.miuul.com/"
+eurotech_url = "https://www.eurotech-gmbh.eu/"
+
+def create_link_button(label, url):
+    return f'<a href="{url}" target="_blank">{label}</a>'
 
 col1, col2 = column_2.columns(2)
 
-if col1.button("Miuul"):
-    open_website(miuul_url)
+col1.markdown(create_link_button("Miuul", miuul_url), unsafe_allow_html=True)
+col2.markdown(create_link_button("euroTech GmbH", eurotech_url), unsafe_allow_html=True)
 
-if col2.button("euroTech GmbH"):
-    open_website(eurotech_url)
+
+
+
 
 
 
