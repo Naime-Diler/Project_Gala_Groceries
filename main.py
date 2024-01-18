@@ -377,7 +377,7 @@ tab_about.markdown("euroTech Study &Miuul Data Science and Machine Learning Boot
 tab_about.markdown("<br>", unsafe_allow_html=True)
 
 tab_about.markdown("Bu seyahatte bizlere rehberlik eden ve destek sağlayan tüm eğitmenlere, mentörlere ve euroTech\n"
-                   "Study &Miuul ailesine içten teşekkürlerimizi sunuyoruz. Veri bilimi ve makine öğrenimi tutkunları\n"
+                   "Study & Miuul ailesine içten teşekkürlerimizi sunuyoruz. Veri bilimi ve makine öğrenimi tutkunları\n"
                    "olarak, elde ettiğimiz bu değerli bilgi ve becerileri, gelecekteki projelerde etkili bir şekilde\n"
                    "kullanmak için sabırsızlıkla bekliyoruz.")
 
