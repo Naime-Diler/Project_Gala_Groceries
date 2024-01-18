@@ -33,7 +33,7 @@ tab_home, tab_data, tab_vis, tab_model = st.tabs(["Homepage", "Datasets", "Chart
 # column_bir, column_iki = st.columns([1, 2])
 column_bir, column_iki = tab_home.columns(2, gap="large")
 
-
+column_bir.subheader("Gala Süpermarketleri'nde Stok Yönetimi")
 column_bir.markdown("Gala Süpermarketleri olarak, teknoloji odaklı bir market zinciri olarak sürekli gelişen ve\n"
                     "yeniliklere açık bir yaklaşım benimsemekteyiz. Leyla Hanım, Almanya’daki Gala Süpermarketleri\n"
                     " mağazasının şube sorumlusu olarak, müşterilere en kaliteli ve taze ürünleri sunma çabası içinde\n"
