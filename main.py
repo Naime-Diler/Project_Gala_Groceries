@@ -79,25 +79,45 @@ eurotech_url = "https://www.eurotech-gmbh.eu/"
 #Versuch 4:
 
 # JavaScript zum Umleiten
-redirect_script = """
-<script>
-function redirectTo(url) {
-    window.open(url, '_blank');
-}
-</script>
-"""
 
-def create_link_button(label, url):
-    return f'<button onclick="redirectTo(\'{url}\')">{label}</button>'
+#redirect_script = """
+#<script>
+#function redirectTo(url) {
+#    window.open(url, '_blank');
+#}
+#</script>
+#"""
 
+#def create_link_button(label, url):
+ #   return f'<button onclick="redirectTo(\'{url}\')">{label}</button>'
+
+
+#col1, col2 = column_2.columns(2)
+
+#col1.markdown(redirect_script, unsafe_allow_html=True)
+#col1.markdown(create_link_button("Miuul", miuul_url), unsafe_allow_html=True)
+
+#col2.markdown(redirect_script, unsafe_allow_html=True)
+#col2.markdown(create_link_button("euroTech GmbH", eurotech_url), unsafe_allow_html=True)
+
+
+# Versuch5:
+import time
+
+# Button für externe Weiterleitung
+redirect_button = column_2.button("Automatisch zu Miuul weiterleiten")
+
+# Logik für die Weiterleitung
+if redirect_button:
+    column_2.write(f"Weiterleite zu Miuul: {miuul_url}")
+    time.sleep(2)  # Hier können Sie eine Verzögerung hinzufügen, um die Meldung anzuzeigen
+    column_2.experimental_rerun()  # App neu starten und zu Miuul weiterleiten
 
 col1, col2 = column_2.columns(2)
 
-col1.markdown(redirect_script, unsafe_allow_html=True)
-col1.markdown(create_link_button("Miuul", miuul_url), unsafe_allow_html=True)
+col1.markdown(f'[**Miuul**]({miuul_url})', unsafe_allow_html=True)
+col2.markdown(f'[**euroTech GmbH**]({eurotech_url})', unsafe_allow_html=True)
 
-col2.markdown(redirect_script, unsafe_allow_html=True)
-col2.markdown(create_link_button("euroTech GmbH", eurotech_url), unsafe_allow_html=True)
 
 
 
