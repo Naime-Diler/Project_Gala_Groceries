@@ -32,7 +32,24 @@ column_1.header(" :green[Gala Groceries Project: Estimation of product stock for
 miuul_url = "https://www.miuul.com/"
 eurotech_url = "https://www.eurotech-gmbh.eu/"
 
+
 # Versuch1:
+#import webbrowser
+
+#def open_website(url):
+#    webbrowser.open_new_tab(url)
+
+#col1, col2 = column_2.columns(2)
+
+#if col1.button("Miuul"):
+#    open_website(miuul_url)
+
+#if col2.button("euroTech GmbH"):
+ #   open_website(eurotech_url)
+
+
+
+# Versuch2:
 #def open_website(url):
  #   column_2.markdown(f'<a href="{url}" target="_blank"><button>{url}</button></a>', unsafe_allow_html=True)
 
@@ -47,10 +64,26 @@ eurotech_url = "https://www.eurotech-gmbh.eu/"
 
 
 
-# Versuch2
+# Versuch3
+
+#def open_website(url):
+#    column_2.markdown(f'<a href="{url}" target="_blank"><button>{url}</button></a>', unsafe_allow_html=True)
+
+#col1, col2 = column_2.columns(2)
+
+#if col1.button("Miuul"):
+#    open_website(miuul_url)
+
+#if col2.button("euroTech GmbH"):
+ #   open_website(eurotech_url)
+
+
+# Versuch 4:
+
 
 def open_website(url):
     column_2.markdown(f'<a href="{url}" target="_blank"><button>{url}</button></a>', unsafe_allow_html=True)
+
 
 col1, col2 = column_2.columns(2)
 
@@ -59,10 +92,6 @@ if col1.button("Miuul"):
 
 if col2.button("euroTech GmbH"):
     open_website(eurotech_url)
-
-
-
-
 
 
 
