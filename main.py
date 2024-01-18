@@ -33,14 +33,11 @@ eurotech_url = "https://www.eurotechstudy.com/public/de"
 
 def open_website(url):
     webbrowser.open_new_tab(url)
-
-col1, col2 = column_2.columns(2)
-
-if col1.button("Miuul"):
-    open_website(miuul_url)
-
-if col2.button("euroTech GmbH"):
-    open_website(eurotech_url)
+    col1, col2 = column_2.columns(2)
+    if col1.button("Miuul"):
+        open_website(miuul_url)
+    if col2.button("euroTech GmbH"):
+        open_website(eurotech_url)
 
 
 
