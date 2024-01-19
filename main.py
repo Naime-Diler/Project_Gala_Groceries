@@ -30,7 +30,7 @@ column_1.header(" :green[Gala Groceries Project: Estimation of product stock for
 
 
 column_2.link_button("Miuul", "https://www.miuul.com/")
-column_2.link_button("euroTech", "https://www.eurotech-gmbh.eu/")
+column_2.link_button("euroTech", "https://www.eurotechstudy.com/public/de")
 
 
 
