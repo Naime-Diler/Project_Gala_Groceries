@@ -47,6 +47,15 @@ eurotech_url = "https://www.eurotech-gmbh.eu/"
  #   open_website(eurotech_url)
 
 
+#Versuch 2:
+result = column_2.button("Miuul")
+
+column_2.write(result)
+if result:
+     open_website(miuul_url)
+
+
+
 
 # Versuch2:
 #def open_website(url):
@@ -64,15 +73,15 @@ eurotech_url = "https://www.eurotech-gmbh.eu/"
 
 
 
-# Versuch3:
+#### Versuch3:
 
-def create_link_button(label, url):
-    return f'<a href="{url}" target="_blank">{label}</a>'
+#def create_link_button(label, url):
+ #   return f'<a href="{url}" target="_blank">{label}</a>'
 
-col1, col2 = column_2.columns(2)
+#col1, col2 = column_2.columns(2)
 
-col1.markdown(create_link_button("Miuul", miuul_url), unsafe_allow_html=True)
-col2.markdown(create_link_button("euroTech GmbH", eurotech_url), unsafe_allow_html=True)
+#col1.markdown(create_link_button("Miuul", miuul_url), unsafe_allow_html=True)
+#col2.markdown(create_link_button("euroTech GmbH", eurotech_url), unsafe_allow_html=True)
 
 
 
