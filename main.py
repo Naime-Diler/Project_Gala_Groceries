@@ -58,12 +58,24 @@ eurotech_url = "https://www.eurotech-gmbh.eu/"
 
 # Versuch3:
 
-import webbrowser
+#import webbrowser
+
+#result = column_2.button("Miuul")
+
+#if result:
+#    webbrowser.open(miuul_url, new=2)
+
+
+
+
+# Versuch4:
+
+import subprocess
 
 result = column_2.button("Miuul")
 
 if result:
-    webbrowser.open(miuul_url, new=2)
+    subprocess.run(["start", miuul_url], shell=True)
 
 
 
