@@ -70,12 +70,23 @@ eurotech_url = "https://www.eurotech-gmbh.eu/"
 
 # Versuch4:
 
-import subprocess
+#import subprocess
 
-result = column_2.button("Miuul")
+#result = column_2.button("Miuul")
+
+#if result:
+ #   subprocess.run(["start", miuul_url], shell=True)
+
+
+
+
+
+#Versuch5:
+
+result = st.button("Miuul")
 
 if result:
-    subprocess.run(["start", miuul_url], shell=True)
+    column_e.markdown(f"[**Miuul**]({miuul_url})", unsafe_allow_html=True)
 
 
 
