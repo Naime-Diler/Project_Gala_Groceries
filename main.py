@@ -48,11 +48,23 @@ eurotech_url = "https://www.eurotech-gmbh.eu/"
 
 
 #Versuch 2:
+#result = column_2.button("Miuul")
+
+#column_2.write(result)
+#if result:
+#     open_website(miuul_url)
+
+
+
+# Versuch3:
+
+import webbrowser
+
 result = column_2.button("Miuul")
 
-column_2.write(result)
 if result:
-     open_website(miuul_url)
+    webbrowser.open(miuul_url, new=2)
+
 
 
 
