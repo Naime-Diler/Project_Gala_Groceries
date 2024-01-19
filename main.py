@@ -81,18 +81,7 @@ eurotech_url = "https://www.eurotech-gmbh.eu/"
 
 
 
-#Versuch5:
-
-result = st.button("Miuul")
-
-if result:
-    column_e.markdown(f"[**Miuul**]({miuul_url})", unsafe_allow_html=True)
-
-
-
-
-
-# Versuch2:
+# Versuch5:
 #def open_website(url):
 #    column_2.markdown(f'<a href="{url}" target="_blank"><button>{url}</button></a>', unsafe_allow_html=True)
 
@@ -108,19 +97,19 @@ if result:
 
 
 
-#### Versuch3:
+#### Versuch6:
 
-#def create_link_button(label, url):
- #   return f'<a href="{url}" target="_blank">{label}</a>'
+def create_link_button(label, url):
+    return f'<a href="{url}" target="_blank">{label}</a>'
 
-#col1, col2 = column_2.columns(2)
+col1, col2 = column_2.columns(2)
 
-#col1.markdown(create_link_button("Miuul", miuul_url), unsafe_allow_html=True)
-#col2.markdown(create_link_button("euroTech GmbH", eurotech_url), unsafe_allow_html=True)
+col1.markdown(create_link_button("Miuul", miuul_url), unsafe_allow_html=True)
+col2.markdown(create_link_button("euroTech GmbH", eurotech_url), unsafe_allow_html=True)
 
 
 
-#Versuch 4:
+#Versuch 7:
 
 # JavaScript zum Umleiten
 
