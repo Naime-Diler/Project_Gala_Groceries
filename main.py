@@ -99,10 +99,10 @@ column_iki.markdown("https://galasupermarkets.com/")
 column1_bir, column1_iki = tab_data.columns(2, gap="large")
 column1_bir.subheader("Columns", divider="rainbow")
 column1_bir.markdown("* transaction_id = this is a unique ID that is assigned to each transaction\n * timestamp = this is the datetime at which the transaction was made\n"
-                     "* product_id = this is an ID that is assigned to the product that was sold. Each product has a unique ID * category = this is the category that the\n"
-                     "product is contained within\n * customer_type = this is the type of customer that made the transaction * unit_price = the price that 1 unit of this\n"
-                     "item sells for * quantity = the number of units sold for this product within this transaction * total = the total amount payable by the customer\n"
-                     "* payment_type = the payment method used by the customer * temperature = time base tempreture informationce from sensors * estimated_stock_pct = shows\n"
+                     "* product_id = this is an ID that is assigned to the product that was sold. Each product has a unique ID\n * category = this is the category that the\n"
+                     "product is contained within\n * customer_type = this is the type of customer that made the transaction\n * unit_price = the price that 1 unit of this\n"
+                     "item sells for\n * quantity = the number of units sold for this product within this transaction\n * total = the total amount payable by the customer\n"
+                     "* payment_type = the payment method used by the customer\n * temperature = time base tempreture informationce from sensorsn\ * estimated_stock_pct = shows\n"
                      "product stock as a percentage, signaling availability or sales using data from sources such as sales and sensors")
 
 
