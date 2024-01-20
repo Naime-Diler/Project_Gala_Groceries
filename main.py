@@ -163,6 +163,13 @@ fig.update_layout(xaxis_title="Category", yaxis_title="Count", legend_title="Cat
 
 tab_vis.plotly_chart(fig)
 
+with tab_vis.expander("See explanation"):
+    st.write("In this chart, sales figures are depicted across various categories. Each category is represented by a\n"
+             "colored bar, where the height of the bar reflects the number of sales in that specific category.")
+    st.write("The x-axis indicates the different categories, while the y-axis represents the quantity of sales.\n"
+             "Additionally, the exact sales figures are displayed as text on their respective bars.")
+
+
 
 tab_vis.subheader("Chart 2", divider="rainbow")
 
@@ -179,6 +186,15 @@ fig = px.bar(sales_hour_df, x="hour", y="quantity", color="hour",
 fig.update_layout(xaxis_title="Hour", yaxis_title="Quantity", legend_title="Hour")
 
 tab_vis.plotly_chart(fig)
+
+
+with tab_vis.expander("See explanation"):
+    st.write("This chart displays the hourly quantity of products sold. Each hour is represented by a colored column,\n"
+             "where the height of the column indicates the quantity of products sold during that specific hour.")
+    st.write("The x-axis lists the various hours of the day, while the y-axis represents the total quantity of products sold.\n"
+             "Additionally, the exact sales figures are displayed as text on their respective columns.")
+
+
 
 
 #tab_vis.subheader("Chart 3", divider="rainbow")
@@ -217,6 +233,14 @@ fig.update_layout(xaxis_title="Hour", yaxis_title="Quantity", legend_title="Cate
 tab_vis.plotly_chart(fig)
 
 
+with tab_vis.expander("See explanation"):
+    st.write("This chart breaks down the hourly quantity of products sold by categories. Each category is\n"
+             "represented by a colored column, with the height of the column indicating the quantity of products\n"
+             "sold in that specific category during the corresponding hour.")
+    st.write("The x-axis lists the various hours of the day, while the y-axis represents the total quantity of products\n"
+             "sold. Additionally, the exact sales figures are displayed as text on their respective columns.")
+
+
 
 tab_vis.subheader("Chart 4", divider="rainbow")
 
@@ -235,6 +259,13 @@ fig.update_layout(xaxis_title="Hour", yaxis_title="total", legend_title="Hour")
 
 tab_vis.plotly_chart(fig)
 
+with tab_vis.expander("See explanation"):
+    st.write("This chart depicts the hourly total sales. Each hour is represented by a colored column\n"
+             "illustrating the total sales in that specific hour. ")
+    st.write("The x-axis displays the hours, while the y-axis represents the total sales. Exact total sales\n"
+             "figures are placed as text on their respective columns.")
+
+
 
 tab_vis.subheader("Chart 5", divider="rainbow")
 
@@ -251,6 +282,15 @@ fig = px.bar(cat_total_df, x="category", y="total", color="category",
 fig.update_layout(xaxis_title="Category", yaxis_title="Total", legend_title="Category")
 
 tab_vis.plotly_chart(fig)
+
+
+with tab_vis.expander("See explanation"):
+    st.write("This chart displays the total sales revenue in various categories. Each category is represented by a\n"
+             "colored column, with the height of the column reflecting the total revenue in that specific category.")
+    st.write("The x-axis indicates the different categories, while the y-axis represents the total revenue. Exact\n"
+             "revenue figures are also placed as text on their respective columns.")
+
+
 
 
 tab_vis.subheader("Chart 6", divider="rainbow")
@@ -276,6 +316,13 @@ fig.update_traces(texttemplate='%{text:.3f}', textposition='inside')
 fig.update_layout(xaxis_title="Hour", yaxis_title="Estimated_stock_pct", legend_title="Category")
 
 tab_vis.plotly_chart(fig)
+
+with tab_vis.expander("See explanation"):
+    st.write("This chart illustrates the average stock percentage (estimated_stock_pct) by hours and categories.\n"
+             "Each category is depicted by a colored column, where the height of the column represents the average\n"
+             "stock percentage in that specific category and hour.")
+    st.write("The x-axis indicates the different hours, while the y-axis represents the average stock percentage. The\n"
+             "exact values are displayed as text on their respective columns.")
 
 
 #tab_vis.subheader("Chart 8", divider="rainbow")
@@ -346,6 +393,13 @@ fig.update_layout(
 
 tab_vis.plotly_chart(fig)
 
+with tab_vis.expander("See explanation"):
+    st.write("This chart displays the average stock percentage (estimated_stock_pct) hourly across all\n"
+             "categories. It is a line chart where the x-axis represents the hours, and the y-axis represents\n"
+             "the average stock percentage. Each point on the line represents the average stock percentage at a specific\n"
+             "hour. The exact values are placed as text on the line points.")
+    
+
 
 
 tab_vis.subheader("Chart 8", divider="rainbow")
@@ -367,6 +421,13 @@ fig.update_traces(texttemplate='%{text:.3f}',) #textposition='inside')
 fig.update_layout(xaxis_title="Category", yaxis_title="Temperature", legend_title="Category")
 
 tab_vis.plotly_chart(fig)
+
+with tab_vis.expander("See explanation"):
+    st.write("This chart illustrates the average temperature in different temperature categories over the hours of the day.\n"
+             "The x-axis represents the hours, while the y-axis depicts the average temperature. Each temperature category is\n"
+             "represented by a line of different color, and each point on the line reflects the average temperature value at a\n"
+             "specific hour within that category. The exact temperature values are placed as text on the line points.")
+    
 
 
 
