@@ -28,10 +28,6 @@ column_1, column_2 = st.columns([2, 1], gap="large")
 column_1.header(" :rainbow[Gala Groceries Project: Estimation of product stock for a market]")
 
 
-##################################################################
-#column_2.link_button("Miuul", "https://www.miuul.com/")
-#column_2.link_button("euroTech", "https://www.eurotechstudy.com/public/de")
-
 
 col1, col2, col3, col4, col5  = column_2.columns(5)
 
@@ -50,7 +46,7 @@ with col4:
 with col5:
    st.metric(":droplet: Humidity", "86%", "4%")
 
-####################################################################################
+
 
 tab_home, tab_data, tab_vis, tab_model, tab_about = st.tabs(["🏠 Homepage", "📂 Datasets", "📈 Charts", "🤖 Model", "📄 About"])
 
@@ -59,36 +55,36 @@ tab_home, tab_data, tab_vis, tab_model, tab_about = st.tabs(["🏠 Homepage", "�
 # column_bir, column_iki = st.columns([1, 2])
 column_bir, column_iki = tab_home.columns(2, gap="large")
 
-column_bir.subheader("Gala Süpermarketleri'nde Stok Yönetimi", divider="rainbow")
-column_bir.markdown("Gala Süpermarketleri olarak, teknoloji odaklı bir market zinciri olarak sürekli gelişen ve\n"
-                    "yeniliklere açık bir yaklaşım benimsemekteyiz. Leyla Hanım, Almanya’daki Gala Süpermarketleri\n"
-                    " mağazasının şube sorumlusu olarak, müşterilere en kaliteli ve taze ürünleri sunma çabası içinde\n"
-                    "olan bir liderdir.")
-column_bir.markdown("Veri bilimi ve makine öğrenimiyle desteklenen bir projeyle karşılaştığımızda, Leyla Hanım'ın\n"
-                    " tedarik zinciri sorunlarına çözüm üretme konusundaki isteği bizi heyecanlandırdı. Bu proje\n"
-                    " kapsamında, satış verileri, sensörlerden gelen stok durumu verileri ve depolardaki sıcaklık\n"
-                    " değerleri gibi önemli veri setlerini analiz ederek,\n ürün stoklamayı optimize etme hedefine\n "
-                    "odaklandık.")
+column_bir.subheader("Inventory management at Gala supermarkets", divider="rainbow")
+column_bir.markdown("Gala Supermarkets, as a technology-driven grocery store chain, embraces a strategy of continuous\n"
+                    "evolution and a commitment to innovation. Leyla Hanım, serving as the branch manager of Gala\n"
+                    "Supermarket in Germany, stands out as a dedicated leader with a focus on consistently providing\n"
+                    "customers with the highest quality and freshest products.") 
+")
+column_bir.markdown("Encountering a project-oriented approach, supported by data science and machine learning, has\n"
+                    "captured our interest. Leyla Hanım's notable willingness to devise innovative solutions for\n"
+                    "challenges in the supply chain has left a lasting impression. Throughout this project, our focus\n"
+                    "has been on analyzing pertinent datasets, including sales data, sensor-derived inventory information,\n"
+                    "and temperature values within storage areas. This effort is directed towards achieving the objective\n"
+                    "of optimizing product storage.")
 
-column_bir.subheader("Proje Hedefi", divider="rainbow")
-column_bir.markdown("Tedarikçilerimizden daha akıllıca ürün tedarik edebilmek için saatlik satış verileri ve sensor\n"
-                    "verilerine dayanarak ürünlerin en optimum seviyede stoklanmasını sağlamak.")
+column_bir.subheader("Project goal", divider="rainbow")
+column_bir.markdown("The goal of our project is to enable efficient sourcing from our suppliers by analyzing hourly sales data\n"
+                    "and sensor signals. This ensures that products are maintained at an optimal level in our inventory.")
 
-column_bir.subheader("Veri Seti ve Analiz Süreci", divider="rainbow")
-column_bir.markdown("Bu hedefe ulaşmak için, kasalardaki satış bilgileri, ürün stok miktarı ve sensörler tarafından\n"
-                    "ölçülen sıcaklık değerlerini içeren üç ayrı veri setini entegre ettik. Veri hazırlığı ve temizleme\n"
-                    "aşamasında, anormallikleri düzelttik ve analize uygun hale getirdik.")
+column_bir.subheader("Dataset and Analysis Process", divider="rainbow")
+column_bir.markdown("To attain this objective, we amalgamated three distinct datasets encompassing details on cash transactions,\n"
+                    "product inventories, and temperature values measured by sensors. During the data preparation and cleaning phase,\n"
+                    "we rectified anomalies, ensuring the data was meticulously primed for analysis.")
 
 column_bir.subheader("Model Geliştirme ve Test Etme", divider="rainbow")
-column_bir.markdown("Projenin kritik aşamalarından biri, belirlenen faktörlerle stok yönetimi arasındaki ilişkiyi\n"
-                    "değerlendirmek için veri bilimi modelleri geliştirmekti. Aykırı değer analizi, standartlaştırma\n"
-                    "ve Scikit-learn kütüphanesi kullanılarak regresyon modelleri oluşturduk. En iyi uyan modelleri\n"
-                    "belirlemek için Light GBM gibi güçlü algoritmaları kullandık.")
+column_bir.markdown("An essential phase of the project entailed crafting data science models to evaluate the connection between identified\n"
+                    "factors and inventory management. This involved creating regression models through outlier analysis, standardization,\n"
+                    "and utilization of the Scikit-learn library. Robust algorithms such as BayesianRidge were employed for optimal model selection.")
 
 
-column_iki.markdown("Bu proje, Gala Süpermarketleri'nin tedarik zinciri süreçlerini daha etkili ve verimli bir şekilde\n"
-                    "yönetmesine yardımcı olacak. Leyla Hanım'ın liderliğindeki ekip, gelecekteki benzer zorluklara\n"
-                    "karşı daha iyi hazırlıklı olacak.")
+column_iki.markdown("The project significantly enhances the efficiency of Gala Supermarkets' supply chain processes under the guidance of Leyla Hanım.\n"
+                    "This ensures the team is well-prepared for forthcoming challenges.")
 
 column_iki.markdown("<br><br>", unsafe_allow_html=True)
 
