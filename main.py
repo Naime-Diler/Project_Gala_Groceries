@@ -24,24 +24,42 @@ def get_data2():
     return df_temp
 
 
-column_1, column_2 = st.columns([6, 1], gap="large")
-column_1.header(" :green[Gala Groceries Project: Estimation of product stock for a market]")
+column_1, column_2 = st.columns([2, 1], gap="large")
+column_1.header(" :rainbow[Gala Groceries Project: Estimation of product stock for a market]")
 
 
+##################################################################
+#column_2.link_button("Miuul", "https://www.miuul.com/")
+#column_2.link_button("euroTech", "https://www.eurotechstudy.com/public/de")
 
-column_2.link_button("Miuul", "https://www.miuul.com/")
-column_2.link_button("euroTech", "https://www.eurotechstudy.com/public/de")
 
+col1, col2, col3, col4, col5  = column_2.columns(5)
 
+with col1:
+   st.link_button("Miuul", "https://www.miuul.com/")
 
-tab_home, tab_data, tab_vis, tab_model, tab_about = st.tabs(["Homepage", "Datasets", "Charts", "Model", "About"])
+with col2:
+  st.link_button("euroTech", "https://www.eurotechstudy.com/public/de")
+
+with col3:
+   st.metric(":thermometer: Temp", "-2 °C", "1.2 °C")
+
+with col4:
+   st.metric(":wind_blowing_face: Wind", "9 mph", "-8%")
+
+with col5:
+   st.metric(":droplet: Humidity", "86%", "4%")
+
+####################################################################################
+
+tab_home, tab_data, tab_vis, tab_model, tab_about = st.tabs(["🏠 Homepage", "📂 Datasets", "📈 Charts", "🤖 Model", "📄 About"])
 
 # Tab home
 # column_bir, column_iki = st.columns(2)
 # column_bir, column_iki = st.columns([1, 2])
 column_bir, column_iki = tab_home.columns(2, gap="large")
 
-column_bir.subheader("Gala Süpermarketleri'nde Stok Yönetimi")
+column_bir.subheader("Gala Süpermarketleri'nde Stok Yönetimi", divider="rainbow")
 column_bir.markdown("Gala Süpermarketleri olarak, teknoloji odaklı bir market zinciri olarak sürekli gelişen ve\n"
                     "yeniliklere açık bir yaklaşım benimsemekteyiz. Leyla Hanım, Almanya’daki Gala Süpermarketleri\n"
                     " mağazasının şube sorumlusu olarak, müşterilere en kaliteli ve taze ürünleri sunma çabası içinde\n"
@@ -52,16 +70,16 @@ column_bir.markdown("Veri bilimi ve makine öğrenimiyle desteklenen bir projeyl
                     " değerleri gibi önemli veri setlerini analiz ederek,\n ürün stoklamayı optimize etme hedefine\n "
                     "odaklandık.")
 
-column_bir.subheader("Proje Hedefi")
+column_bir.subheader("Proje Hedefi", divider="rainbow")
 column_bir.markdown("Tedarikçilerimizden daha akıllıca ürün tedarik edebilmek için saatlik satış verileri ve sensor\n"
                     "verilerine dayanarak ürünlerin en optimum seviyede stoklanmasını sağlamak.")
 
-column_bir.subheader("Veri Seti ve Analiz Süreci")
+column_bir.subheader("Veri Seti ve Analiz Süreci", divider="rainbow")
 column_bir.markdown("Bu hedefe ulaşmak için, kasalardaki satış bilgileri, ürün stok miktarı ve sensörler tarafından\n"
                     "ölçülen sıcaklık değerlerini içeren üç ayrı veri setini entegre ettik. Veri hazırlığı ve temizleme\n"
                     "aşamasında, anormallikleri düzelttik ve analize uygun hale getirdik.")
 
-column_bir.subheader("Model Geliştirme ve Test Etme")
+column_bir.subheader("Model Geliştirme ve Test Etme", divider="rainbow")
 column_bir.markdown("Projenin kritik aşamalarından biri, belirlenen faktörlerle stok yönetimi arasındaki ilişkiyi\n"
                     "değerlendirmek için veri bilimi modelleri geliştirmekti. Aykırı değer analizi, standartlaştırma\n"
                     "ve Scikit-learn kütüphanesi kullanılarak regresyon modelleri oluşturduk. En iyi uyan modelleri\n"
@@ -82,7 +100,7 @@ column_iki.markdown("https://galasupermarkets.com/")
 
 # Tab Data
 column1_bir, column1_iki = tab_data.columns(2, gap="large")
-column1_bir.subheader("Columns")
+column1_bir.subheader("Columns", divider="rainbow")
 column1_bir.markdown("* transaction_id = this is a unique ID that is assigned to each transaction\n * timestamp = this is the datetime at which the transaction was made\n * product_id = this is an ID that is assigned to the product that was sold. Each product has a unique ID\n * category = this is the category that the product is contained within\n * customer_type = this is the type of customer that made the transaction\n * unit_price = the price that 1 unit of this item sells for\n * quantity = the number of units sold for this product within this transaction\n * total = the total amount payable by the customer\n * payment_type = the payment method used by the customer\n * temperature = time base tempreture informationce from sensors\n * estimated_stock_pct = shows product stock as a percentage, signaling availability or sales using data from sources such as sales and sensors")
 
 
@@ -117,20 +135,20 @@ for df in [sales, stock, temp]:
   df['hour'] = df['timestamp'].dt.hour
 
 
-column1_bir.subheader("Sample_Sales_Data")
+column1_bir.subheader("Sample_Sales_Data", divider="rainbow")
 column1_bir.dataframe(sales, width=900)
 
-column1_iki.subheader("Sensor_Stock_Levels")
+column1_iki.subheader("Sensor_Stock_Levels", divider="rainbow")
 column1_iki.dataframe(stock, width=900)
 
-column1_iki.subheader("Sensor_Storage_Temperature")
+column1_iki.subheader("Sensor_Storage_Temperature", divider="rainbow")
 column1_iki.dataframe(temp, width=900)
 
 
 
 # Tab Vis
 
-tab_vis.subheader("Chart 1")
+tab_vis.subheader("Chart 1", divider="rainbow")
 
 fig = px.bar(count_df, x="category", y="count", color="category",
              labels={"count": "Count"},
@@ -144,7 +162,7 @@ fig.update_layout(xaxis_title="Category", yaxis_title="Count", legend_title="Cat
 tab_vis.plotly_chart(fig)
 
 
-tab_vis.subheader("Chart 2")
+tab_vis.subheader("Chart 2", divider="rainbow")
 
 sales_hour = sales[["hour", "quantity"]]
 sales_hour_df = sales_hour.groupby("hour")["quantity"].sum().reset_index()
@@ -161,7 +179,7 @@ fig.update_layout(xaxis_title="Hour", yaxis_title="Quantity", legend_title="Hour
 tab_vis.plotly_chart(fig)
 
 
-#tab_vis.subheader("Chart 3")
+#tab_vis.subheader("Chart 3", divider="rainbow")
 
 #sales_hour = sales[["hour", "quantity", "category"]]
 #sales_hour_df = sales_hour.groupby(["hour", "category"])["quantity"].sum().reset_index()
@@ -179,7 +197,7 @@ tab_vis.plotly_chart(fig)
 #tab_vis.plotly_chart(fig)
 
 
-tab_vis.subheader("Chart 3")
+tab_vis.subheader("Chart 3", divider="rainbow")
 
 sales_hour = sales[["hour", "quantity", "category"]]
 sales_hour_df = sales_hour.groupby(["hour", "category"])["quantity"].sum().reset_index()
@@ -198,7 +216,7 @@ tab_vis.plotly_chart(fig)
 
 
 
-tab_vis.subheader("Chart 4")
+tab_vis.subheader("Chart 4", divider="rainbow")
 
 
 sales_total = sales[["hour", "total"]]
@@ -216,7 +234,7 @@ fig.update_layout(xaxis_title="Hour", yaxis_title="total", legend_title="Hour")
 tab_vis.plotly_chart(fig)
 
 
-tab_vis.subheader("Chart 5")
+tab_vis.subheader("Chart 5", divider="rainbow")
 
 cat_total_df =  sales.groupby("category")["total"].sum().reset_index()
 cat_total_df.columns = ["category", "total"]
@@ -233,7 +251,7 @@ fig.update_layout(xaxis_title="Category", yaxis_title="Total", legend_title="Cat
 tab_vis.plotly_chart(fig)
 
 
-tab_vis.subheader("Chart 6")
+tab_vis.subheader("Chart 6", divider="rainbow")
 
 sls = sales[["product_id", "category"]]
 stck = stock.merge(sls, on="product_id", how="left")
@@ -258,7 +276,7 @@ fig.update_layout(xaxis_title="Hour", yaxis_title="Estimated_stock_pct", legend_
 tab_vis.plotly_chart(fig)
 
 
-#tab_vis.subheader("Chart 8")
+#tab_vis.subheader("Chart 8", divider="rainbow")
 
 # Hourly Stock Estimated Stock Percentage by Category
 
@@ -283,7 +301,7 @@ tab_vis.plotly_chart(fig)
 
 
 
-#tab_vis.subheader("Chart 9")
+#tab_vis.subheader("Chart 9", divider="rainbow")
 
 # Hourly Stock Estimated Stock Percentage
 
@@ -305,7 +323,7 @@ tab_vis.plotly_chart(fig)
 #tab_vis.plotly_chart(fig)
 
 
-tab_vis.subheader("Chart 7")
+tab_vis.subheader("Chart 7", divider="rainbow")
 # Hourly Stock Estimated Stock Percentage
 
 stock_hour2 = stck[["hour", "estimated_stock_pct"]]
@@ -328,7 +346,7 @@ tab_vis.plotly_chart(fig)
 
 
 
-tab_vis.subheader("Chart 8")
+tab_vis.subheader("Chart 8", divider="rainbow")
 
 tmp = temp.drop("id", axis=1)
 
@@ -375,7 +393,7 @@ if tab_model.button("Predict!"):
 
 # Tab About:
 
-tab_about.subheader("HAKKIMIZDA")
+tab_about.subheader(":[HAKKIMIZDA]")
 tab_about.markdown("euroTech Study & Miuul Data Science and Machine Learning Bootcamp katılımcıları olarak, veri bilimi\n"
                    "ve makine öğrenimi dünyasına adım atmak amacıyla bir araya geldik. Eğitim süresince gerçek dünya\n"
                    "projeleri üzerinde çalışarak edindiğimiz bilgileri pekiştirdik. Bootcamp programının sonunda\n"
@@ -393,17 +411,25 @@ tab_about.markdown("Bu seyahatte bizlere rehberlik eden ve destek sağlayan tüm
 
 tab_about.markdown("<br><br><br><br><br><br><br>", unsafe_allow_html=True)
 
-def create_linked_profiles(profiles):
-    columns = tab_about.columns(len(profiles))
 
-    for column, (name, linkedin_url) in zip(columns, profiles):
-        column.markdown(f'[**{name}**]({linkedin_url})')
+co1, co2, co3, co4, co5  = tab_about.columns(5)
 
+with co1:
+   st.image("Betül Karagöz.jpg", "Betül Karagöz", width=130)
+   st.link_button("Linkedin", "https://www.linkedin.com/in/betül-karagöz/")
 
-profiles = [("Betül Karagöz", "https://www.linkedin.com/in/betül-karagöz/"),
-            ("Bilal Özdemir", "https://www.linkedin.com/in/bilal-%C3%B6zdemir-0a5b58287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"),
-            ("Cemil Öksüz", "https://www.linkedin.com/in/cemil-oksuz/"),
-            ("Ercan Tayfun", "https://www.linkedin.com/in/e-tayfun/"),
-            ("Naime Diler", "https://www.linkedin.com/in/naime-diler/")]
+with co2:
+  st.image("Bilal Özdemir.jpg", "Bilal Özdemir", width=150)
+  st.link_button("Linkedin", "https://www.linkedin.com/in/bilal-%C3%B6zdemir-0a5b58287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app")
 
-create_linked_profiles(profiles)
+with co3:
+   st.image("Cemil Öksüz.jpg", "Cemil Öksüz", width=120)
+   st.link_button("Linkedin", "https://www.linkedin.com/in/cemil-oksuz/")
+
+with co4:
+   st.image("Ercan Tayfun.jpg", "Ercan Tayfun", width=150)
+   st.link_button("Linkedin", "https://www.linkedin.com/in/e-tayfun/")
+
+with co5:
+   st.image("Naime Diler.jpg", "Naime Diler", width=150)
+   st.link_button("Linkedin", "https://www.linkedin.com/in/naime-diler/")
