@@ -102,7 +102,7 @@ column1_bir.markdown("* transaction_id = this is a unique ID that is assigned to
                      "* product_id = this is an ID that is assigned to the product that was sold. Each product has a unique ID\n * category = this is the category that the\n"
                      "product is contained within\n * customer_type = this is the type of customer that made the transaction\n * unit_price = the price that 1 unit of this\n"
                      "item sells for\n * quantity = the number of units sold for this product within this transaction\n * total = the total amount payable by the customer\n"
-                     "* payment_type = the payment method used by the customer\n * temperature = time base tempreture informationce from sensorsn\ * estimated_stock_pct = shows\n"
+                     "* payment_type = the payment method used by the customer\n * temperature = time base tempreture informationce from sensors\n * estimated_stock_pct = shows\n"
                      "product stock as a percentage, signaling availability or sales using data from sources such as sales and sensors")
 
 
