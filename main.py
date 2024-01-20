@@ -78,12 +78,13 @@ column_bir.markdown("To attain this objective, we amalgamated three distinct dat
                     "we rectified anomalies, ensuring the data was meticulously primed for analysis.")
 
 column_bir.subheader("Model Geliştirme ve Test Etme", divider="rainbow")
-column_bir.markdown("An essential phase of the project entailed crafting data science models to evaluate the connection between identified\n"
-                    "factors and inventory management. This involved creating regression models through outlier analysis, standardization,\n"
-                    "and utilization of the Scikit-learn library. Robust algorithms such as BayesianRidge were employed for optimal model selection.")
+column_bir.markdown("An essential phase of the project entailed crafting data science models to evaluate the connection between identified")
+                    
 
 
-column_iki.markdown("The project significantly enhances the efficiency of Gala Supermarkets' supply chain processes under the guidance of Leyla Hanım.\n"
+column_iki.markdown("factors and inventory management. This involved creating regression models through outlier analysis, standardization,\n"
+                    "and utilization of the Scikit-learn library. Robust algorithms such as BayesianRidge were employed for optimal model selection."
+                    "The project significantly enhances the efficiency of Gala Supermarkets' supply chain processes under the guidance of Leyla Hanım.\n"
                     "This ensures the team is well-prepared for forthcoming challenges.")
 
 column_iki.markdown("<br><br>", unsafe_allow_html=True)
