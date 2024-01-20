@@ -60,7 +60,7 @@ column_bir.markdown("Gala Supermarkets, as a technology-driven grocery store cha
                     "evolution and a commitment to innovation. Leyla Hanım, serving as the branch manager of Gala\n"
                     "Supermarket in Germany, stands out as a dedicated leader with a focus on consistently providing\n"
                     "customers with the highest quality and freshest products.") 
-")
+
 column_bir.markdown("Encountering a project-oriented approach, supported by data science and machine learning, has\n"
                     "captured our interest. Leyla Hanım's notable willingness to devise innovative solutions for\n"
                     "challenges in the supply chain has left a lasting impression. Throughout this project, our focus\n"
