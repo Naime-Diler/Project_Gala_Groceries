@@ -417,20 +417,20 @@ co1, co2, co3, co4, co5  = tab_about.columns(5)
 
 with co1:
    st.image("Betül Karagöz.jpg", "Betül Karagöz", width=130)
-   st.link_button("Linkedin", "https://www.linkedin.com/in/betül-karagöz/")
+   st.link_button("LinkedIn", "https://www.linkedin.com/in/betül-karagöz/")
 
 with co2:
   st.image("Bilal Özdemir.jpg", "Bilal Özdemir", width=150)
-  st.link_button("Linkedin", "https://www.linkedin.com/in/bilal-%C3%B6zdemir-0a5b58287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app")
+  st.link_button("LinkedIn", "https://www.linkedin.com/in/bilal-%C3%B6zdemir-0a5b58287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app")
 
 with co3:
    st.image("Cemil Öksüz.jpg", "Cemil Öksüz", width=120)
-   st.link_button("Linkedin", "https://www.linkedin.com/in/cemil-oksuz/")
+   st.link_button("LinkedIn", "https://www.linkedin.com/in/cemil-oksuz/")
 
 with co4:
    st.image("Ercan Tayfun.jpg", "Ercan Tayfun", width=150)
-   st.link_button("Linkedin", "https://www.linkedin.com/in/e-tayfun/")
+   st.link_button("LinkedIn", "https://www.linkedin.com/in/e-tayfun/")
 
 with co5:
    st.image("Naime Diler.jpg", "Naime Diler", width=150)
-   st.link_button("Linkedin", "https://www.linkedin.com/in/naime-diler/")
+   st.link_button("LinkedIn", "https://www.linkedin.com/in/naime-diler/")
