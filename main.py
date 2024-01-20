@@ -77,7 +77,7 @@ column_bir.markdown("To attain this objective, we amalgamated three distinct dat
                     "product inventories, and temperature values measured by sensors. During the data preparation and cleaning phase,\n"
                     "we rectified anomalies, ensuring the data was meticulously primed for analysis.")
 
-column_bir.subheader("Model Geliştirme ve Test Etme", divider="rainbow")
+column_bir.subheader("Development and Testing of the Model", divider="rainbow")
 column_bir.markdown("An essential phase of the project entailed crafting data science models to evaluate the connection between identified")
                     
 
