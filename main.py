@@ -78,13 +78,13 @@ column_bir.markdown("To attain this objective, we amalgamated three distinct dat
                     "we rectified anomalies, ensuring the data was meticulously primed for analysis.")
 
 column_bir.subheader("Development and Testing of the Model", divider="rainbow")
-column_bir.markdown("An essential phase of the project entailed crafting data science models to evaluate the connection between identified")
+column_bir.markdown("An essential phase of the project entailed crafting data science models to evaluate the connection between identified\n"
+                   "factors and inventory management. This involved creating regression models through outlier analysis, standardization,\n"
+                    "and utilization of the Scikit-learn library. Robust algorithms such as BayesianRidge were employed for optimal model selection.")
                     
 
 
-column_iki.markdown("factors and inventory management. This involved creating regression models through outlier analysis, standardization,\n"
-                    "and utilization of the Scikit-learn library. Robust algorithms such as BayesianRidge were employed for optimal model selection."
-                    "The project significantly enhances the efficiency of Gala Supermarkets' supply chain processes under the guidance of Leyla Hanım.\n"
+column_iki.markdown("The project significantly enhances the efficiency of Gala Supermarkets' supply chain processes under the guidance of Leyla Hanım.\n"
                     "This ensures the team is well-prepared for forthcoming challenges.")
 
 column_iki.markdown("<br><br>", unsafe_allow_html=True)
@@ -98,7 +98,12 @@ column_iki.markdown("https://galasupermarkets.com/")
 # Tab Data
 column1_bir, column1_iki = tab_data.columns(2, gap="large")
 column1_bir.subheader("Columns", divider="rainbow")
-column1_bir.markdown("* transaction_id = this is a unique ID that is assigned to each transaction\n * timestamp = this is the datetime at which the transaction was made\n * product_id = this is an ID that is assigned to the product that was sold. Each product has a unique ID\n * category = this is the category that the product is contained within\n * customer_type = this is the type of customer that made the transaction\n * unit_price = the price that 1 unit of this item sells for\n * quantity = the number of units sold for this product within this transaction\n * total = the total amount payable by the customer\n * payment_type = the payment method used by the customer\n * temperature = time base tempreture informationce from sensors\n * estimated_stock_pct = shows product stock as a percentage, signaling availability or sales using data from sources such as sales and sensors")
+column1_bir.markdown("* transaction_id = this is a unique ID that is assigned to each transaction\n * timestamp = this is the datetime at which the transaction was made\n"
+                     "* product_id = this is an ID that is assigned to the product that was sold. Each product has a unique ID * category = this is the category that the\n"
+                     "product is contained within\n * customer_type = this is the type of customer that made the transaction * unit_price = the price that 1 unit of this\n"
+                     "item sells for * quantity = the number of units sold for this product within this transaction * total = the total amount payable by the customer\n"
+                     "* payment_type = the payment method used by the customer * temperature = time base tempreture informationce from sensors * estimated_stock_pct = shows\n"
+                     "product stock as a percentage, signaling availability or sales using data from sources such as sales and sensors")
 
 
 df = get_data()
