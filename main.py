@@ -395,19 +395,18 @@ if tab_model.button("Predict!"):
 
 # Tab About:
 
-tab_about.subheader(" :rainbow[HAKKIMIZDA]")
-tab_about.markdown("euroTech Study & Miuul Data Science and Machine Learning Bootcamp katılımcıları olarak, veri bilimi\n"
-                   "ve makine öğrenimi dünyasına adım atmak amacıyla bir araya geldik. Eğitim süresince gerçek dünya\n"
-                   "projeleri üzerinde çalışarak edindiğimiz bilgileri pekiştirdik. Bootcamp programının sonunda\n"
-                   "sunduğumuz bu proje ile bu önemli süreci tamamlıyoruz. Kazandığımız bilgi ve deneyimle, geleceğin\n"
-                   "veri bilimcileri olarak, bu alanda başarılı bir kariyere adım atmak için hazırız.")
+tab_about.subheader(" :rainbow[About Us]")
+tab_about.markdown("As participants of the EuroTech Study & Miuul Data Science and Machine Learning Bootcamp, we\n"
+                   "have come together to venture into the world of data science and machine learning. Throughout the\n"
+                   "training period, we solidified our knowledge by working on real-world projects. With this final project,\n"
+                   "we showcase the outcomes of our bootcamp program, concluding this significant phase. Armed with the acquired\n"
+                   "knowledge and experience, we are prepared to embark on a successful career as aspiring data scientists in this field.")
 
 tab_about.markdown("<br>", unsafe_allow_html=True)
 
-tab_about.markdown("Bu seyahatte bizlere rehberlik eden ve destek sağlayan tüm eğitmenlere, mentörlere ve euroTech\n"
-                   "Study & Miuul ailesine içten teşekkürlerimizi sunuyoruz. Veri bilimi ve makine öğrenimi tutkunları\n"
-                   "olarak, elde ettiğimiz bu değerli bilgi ve becerileri, gelecekteki projelerde etkili bir şekilde\n"
-                   "kullanmak için sabırsızlıkla bekliyoruz.")
+tab_about.markdown("On this journey, we would like to express our heartfelt gratitude to all the teachers, mentors, and the EuroTech Study & Miuul\n"
+                   "family who have accompanied and supported us. As enthusiasts of data science and machine learning, we look forward to effectively\n"
+                   "applying the valuable knowledge and skills we have gained in future projects.")
 
 
 
