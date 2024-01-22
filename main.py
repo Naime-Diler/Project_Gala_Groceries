@@ -477,7 +477,7 @@ tab_about.markdown("<br><br><br><br><br><br><br>", unsafe_allow_html=True)
 co1, co2, co3, co4, co5  = tab_about.columns(5)
 
 with co1:
-   st.image("Betül Karagöz.jpg", "Betül Karagöz", width=130)
+   st.image("Betül Karagöz1.jpg", "Betül Karagöz", width=130)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/betül-karagöz/")
 
 with co2:
