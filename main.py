@@ -485,11 +485,11 @@ with co2:
   st.link_button("LinkedIn", "https://www.linkedin.com/in/bilal-%C3%B6zdemir-0a5b58287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app")
 
 with co3:
-   st.image("Cemil Öksüz.jpg", "Cemil Öksüz", width=120)
+   st.image("Cemil Öksüz.jpg", "Cemil Öksüz", width=130)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/cemil-oksuz/")
 
 with co4:
-   st.image("Ercan Tayfun.jpg", "Ercan Tayfun", width=150)
+   st.image("Ercan Tayfun.jpg", "Ercan Tayfun", width=160)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/e-tayfun/")
 
 with co5:
