@@ -493,5 +493,5 @@ with co4:
    st.link_button("LinkedIn", "https://www.linkedin.com/in/e-tayfun/")
 
 with co5:
-   st.image("Naime Diler1.jpg", "Naime Diler", width=160)
+   st.image("Naime Diler1.jpg", "Naime Diler", width=200)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/naime-diler/")
