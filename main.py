@@ -477,21 +477,21 @@ tab_about.markdown("<br><br><br><br><br><br><br>", unsafe_allow_html=True)
 co1, co2, co3, co4, co5  = tab_about.columns(5)
 
 with co1:
-   st.image("Betül Karagöz1.jpg", "Betül Karagöz", width=140)
+   st.image("Betül Karagöz1.jpg", "Betül Karagöz", width=130)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/betül-karagöz/")
 
 with co2:
-  st.image("Bilal Özdemir.jpg", "Bilal Özdemir", width=150)
+  st.image("Bilal Özdemir.jpg", "Bilal Özdemir", width=160)
   st.link_button("LinkedIn", "https://www.linkedin.com/in/bilal-%C3%B6zdemir-0a5b58287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app")
 
 with co3:
-   st.image("Cemil Öksüz.jpg", "Cemil Öksüz", width=160)
+   st.image("Cemil Öksüz.jpg", "Cemil Öksüz", width=150)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/cemil-oksuz/")
 
 with co4:
-   st.image("Ercan Tayfun1.jpg", "Ercan Tayfun", width=170)
+   st.image("Ercan Tayfun1.jpg", "Ercan Tayfun", width=160)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/e-tayfun/")
 
 with co5:
-   st.image("Naime Diler1.jpg", "Naime Diler", width=250)
+   st.image("Naime Diler1.jpg", "Naime Diler", width=230)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/naime-diler/")
