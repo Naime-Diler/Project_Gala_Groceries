@@ -451,10 +451,10 @@ def get_model():
 model = get_model()
 
 quantity_original = tab_model.number_input("Enter Quantity", min_value = 1, max_value = 4, step=1 ,value = 1)
-temp_category = tab_model.number_input("Enter Category :  1: (-36°C to -16°C) # 2: (-16°C to 0°C) # 3: (0°C to 15°C) # 4: (15°C to 19°C) # 5: (19°C to 36°C)", min_value = 1, max_value = 5, step=1 ,value = 1)
+temp_category = tab_model.number_input("Enter Category :  :red[1:] (-36°C to -16°C) # :red[2:] (-16°C to 0°C) # :red[3:] (0°C to 15°C) # :red[4:] (15°C to 19°C) # :red[5:] (19°C to 36°C)", min_value = 1, max_value = 5, step=1 ,value = 1)
 temperature = tab_model.number_input("Enter Temperature : :red[Attention:] Enter the temperature suitable for the category you selected!", min_value = -36, max_value = 36, step=1 ,value = 0)
 unit_price = tab_model.number_input("Enter Unit Price", min_value = 0.0, max_value = 24.0, step=0.01 ,value = 0.0)
-day = tab_model.number_input("Enter Day: (0: Tuesday) # (1: Wednesday) # (2: Thursday) # (3: Friday) # (4: Saturday) # (5: Sunday) # (6: Monday)", min_value = 0, max_value = 6, step=1, value = 0)
+day = tab_model.number_input("Enter Day: (:red[0:] Tuesday) # (:red[1:] Wednesday) # (:red[2:] Thursday) # (:red[3:] Friday) # (:red[4:] Saturday) # (:red[5:] Sunday) # (:red[6:] Monday)", min_value = 0, max_value = 6, step=1, value = 0)
 hour = tab_model.number_input("Enter Hour", min_value = 9, max_value = 19, step=1 ,value = 9)
 quantity_total = tab_model.number_input("Enter Weekly Total Quantity", min_value = 0, max_value = 288, step=1 ,value = 0)
 
