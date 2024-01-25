@@ -481,7 +481,7 @@ with co1:
    st.link_button("LinkedIn", "https://www.linkedin.com/in/betül-karagöz/")
 
 with co2:
-  st.image("Bilal Özdemir.jpg", "Bilal Özdemir", width=160)
+  st.image("Bilal Özdemir1.jpg", "Bilal Özdemir", width=160)
   st.link_button("LinkedIn", "https://www.linkedin.com/in/bilal-%C3%B6zdemir-0a5b58287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app")
 
 with co3:
