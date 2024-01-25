@@ -246,7 +246,7 @@ with tab_vis.expander("See explanation"):
 #tab_vis.plotly_chart(fig)
 
 
-tab_vis.subheader("***Chart4* **", divider="rainbow")
+tab_vis.subheader("***Chart 4***", divider="rainbow")
 
 sales_hour = sales[["hour", "quantity", "category"]]
 sales_hour_df = sales_hour.groupby(["hour", "category"])["quantity"].sum().reset_index()
