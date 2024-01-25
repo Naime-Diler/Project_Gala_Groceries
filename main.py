@@ -413,7 +413,7 @@ cat_temp = tmp.groupby(["temp_category", "hour"])["temperature"].mean().reset_in
 
 fig = px.line(cat_temp, x="hour", y="temperature", color="temp_category",
              labels={"temperature": "Temperature"},
-             title="Categorical temperature",
+             title="Categorical Temperature",
              text="temperature",
              width=1000, height=600,
              color_discrete_sequence=px.colors.qualitative.Set3)
