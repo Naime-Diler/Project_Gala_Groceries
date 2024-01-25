@@ -63,7 +63,7 @@ column_one.markdown("**Gala Supermarkets**, as a technology-driven grocery store
                     "customers with the highest quality and freshest products.") 
 
 column_one.markdown("Encountering a project-oriented approach, supported by data science and machine learning, has\n"
-                    "captured our interest. ***Leyla Hanım's*** notable willingness to devise innovative solutions for\n"
+                    "captured our interest. Leyla Hanım's notable willingness to devise innovative solutions for\n"
                     "challenges in the supply chain has left a lasting impression. Throughout this project, our focus\n"
                     "has been on analyzing pertinent datasets, including sales data, sensor-derived inventory information,\n"
                     "and temperature values within storage areas. This effort is directed towards achieving the objective\n"
@@ -85,7 +85,7 @@ column_one.markdown("An essential phase of the project entailed crafting data sc
                     
 
 
-column_two.markdown("The project significantly enhances the efficiency of Gala Supermarkets' supply chain processes under the guidance of ***Leyla Hanım***.\n"
+column_two.markdown("The project significantly enhances the efficiency of Gala Supermarkets' supply chain processes under the guidance of Leyla Hanım.\n"
                     "This ensures the team is well-prepared for forthcoming challenges.")
 
 column_two.markdown("<br><br>", unsafe_allow_html=True)
@@ -469,7 +469,7 @@ if tab_model.button(":rainbow[Predict!]"):
 # Tab About:
 
 tab_about.subheader(" :rainbow[About Us]")
-tab_about.markdown("As participants of the EuroTech Study & Miuul Data Science and Machine Learning Bootcamp, we\n"
+tab_about.markdown("As participants of the **EuroTech Study** & **Miuul** Data Science and Machine Learning Bootcamp, we\n"
                    "have come together to venture into the world of data science and machine learning. Throughout the\n"
                    "training period, we solidified our knowledge by working on real-world projects. With this final project,\n"
                    "we showcase the outcomes of our bootcamp program, concluding this significant phase. Armed with the acquired\n"
@@ -489,21 +489,21 @@ tab_about.markdown("<br><br><br><br><br><br><br>", unsafe_allow_html=True)
 co1, co2, co3, co4, co5  = tab_about.columns(5)
 
 with co1:
-   st.image("Betül Karagöz1.jpg", "Betül Karagöz", width=130)
+   st.image("Betül Karagöz1.jpg", "***Betül Karagöz***", width=130)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/betül-karagöz/")
 
 with co2:
-  st.image("Bilal Özdemir1.jpg", "Bilal Özdemir", width=140)
+  st.image("Bilal Özdemir1.jpg", "***Bilal Özdemir***", width=140)
   st.link_button("LinkedIn", "https://www.linkedin.com/in/bilal-%C3%B6zdemir-0a5b58287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app")
 
 with co3:
-   st.image("Cemil Öksüz.jpg", "Cemil Öksüz", width=150)
+   st.image("Cemil Öksüz.jpg", "***Cemil Öksüz***", width=150)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/cemil-oksuz/")
 
 with co4:
-   st.image("Ercan Tayfun1.jpg", "Ercan Tayfun", width=160)
+   st.image("Ercan Tayfun1.jpg", "***Ercan Tayfun***", width=160)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/e-tayfun/")
 
 with co5:
-   st.image("Naime Diler1.jpg", "Naime Diler", width=230)
+   st.image("Naime Diler1.jpg", "***Naime Diler***", width=230)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/naime-diler/")
