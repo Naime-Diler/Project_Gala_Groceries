@@ -112,7 +112,9 @@ df_temp = get_data2()
 
 
 
-
+# for chart 1:
+count_df = df.category.value_counts().reset_index()
+count_df.columns = ["category", "count"]
 
 
 
@@ -150,10 +152,6 @@ column1_iki.dataframe(temp, width=900)
 
 tab_vis.subheader("Chart 1", divider="rainbow")
 
-# for chart 1:
-count_df = df.category.value_counts().reset_index()
-count_df.columns = ["category", "count"]
-
 fig = px.bar(count_df, x="category", y="count", color="category",
              labels={"count": "Count"},
              title="Categorical Sales Count",
@@ -170,6 +168,35 @@ with tab_vis.expander("See explanation"):
              "colored bar, where the height of the bar reflects the number of sales in that specific category.")
     st.write("The x-axis indicates the different categories, while the y-axis represents the quantity of sales.\n"
              "Additionally, the exact sales figures are displayed as text on their respective bars.")
+
+
+
+
+
+tab_vis.subheader("Chart 5", divider="rainbow")
+
+cat_total_df =  sales.groupby("category")["total"].sum().reset_index()
+cat_total_df.columns = ["category", "total"]
+
+fig = px.bar(cat_total_df, x="category", y="total", color="category",
+             labels={"total": "Total"},
+             title="Categorical Sales Total",
+             text="total",
+             width=800, height=600,
+             color_discrete_sequence=px.colors.qualitative.Set3)
+
+fig.update_layout(xaxis_title="Category", yaxis_title="Total", legend_title="Category")
+
+tab_vis.plotly_chart(fig)
+
+
+with tab_vis.expander("See explanation"):
+    st.write("This chart displays the total sales revenue in various categories. Each category is represented by a\n"
+             "colored column, with the height of the column reflecting the total revenue in that specific category.")
+    st.write("The x-axis indicates the different categories, while the y-axis represents the total revenue. Exact\n"
+             "revenue figures are also placed as text on their respective columns.")
+
+
 
 
 
@@ -269,28 +296,7 @@ with tab_vis.expander("See explanation"):
 
 
 
-tab_vis.subheader("Chart 5", divider="rainbow")
 
-cat_total_df =  sales.groupby("category")["total"].sum().reset_index()
-cat_total_df.columns = ["category", "total"]
-
-fig = px.bar(cat_total_df, x="category", y="total", color="category",
-             labels={"total": "Total"},
-             title="Categorical Sales Total",
-             text="total",
-             width=800, height=600,
-             color_discrete_sequence=px.colors.qualitative.Set3)
-
-fig.update_layout(xaxis_title="Category", yaxis_title="Total", legend_title="Category")
-
-tab_vis.plotly_chart(fig)
-
-
-with tab_vis.expander("See explanation"):
-    st.write("This chart displays the total sales revenue in various categories. Each category is represented by a\n"
-             "colored column, with the height of the column reflecting the total revenue in that specific category.")
-    st.write("The x-axis indicates the different categories, while the y-axis represents the total revenue. Exact\n"
-             "revenue figures are also placed as text on their respective columns.")
 
 
 
