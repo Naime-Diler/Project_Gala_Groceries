@@ -57,13 +57,13 @@ tab_home, tab_data, tab_vis, tab_model, tab_about = st.tabs(["🏠 Homepage", "�
 column_one, column_two = tab_home.columns(2, gap="large")
 
 column_one.subheader("Inventory management at Gala supermarkets", divider="rainbow")
-column_one.markdown("Gala Supermarkets, as a technology-driven grocery store chain, embraces a strategy of continuous\n"
-                    "evolution and a commitment to innovation. Leyla Hanım, serving as the branch manager of Gala\n"
+column_one.markdown("**Gala Supermarkets**, as a technology-driven grocery store chain, embraces a strategy of continuous\n"
+                    "evolution and a commitment to innovation. ***Leyla Hanım***, serving as the branch manager of Gala\n"
                     "Supermarket in Germany, stands out as a dedicated leader with a focus on consistently providing\n"
                     "customers with the highest quality and freshest products.") 
 
 column_one.markdown("Encountering a project-oriented approach, supported by data science and machine learning, has\n"
-                    "captured our interest. Leyla Hanım's notable willingness to devise innovative solutions for\n"
+                    "captured our interest. ***Leyla Hanım's*** notable willingness to devise innovative solutions for\n"
                     "challenges in the supply chain has left a lasting impression. Throughout this project, our focus\n"
                     "has been on analyzing pertinent datasets, including sales data, sensor-derived inventory information,\n"
                     "and temperature values within storage areas. This effort is directed towards achieving the objective\n"
@@ -85,7 +85,7 @@ column_one.markdown("An essential phase of the project entailed crafting data sc
                     
 
 
-column_two.markdown("The project significantly enhances the efficiency of Gala Supermarkets' supply chain processes under the guidance of Leyla Hanım.\n"
+column_two.markdown("The project significantly enhances the efficiency of Gala Supermarkets' supply chain processes under the guidance of ***Leyla Hanım***.\n"
                     "This ensures the team is well-prepared for forthcoming challenges.")
 
 column_two.markdown("<br><br>", unsafe_allow_html=True)
