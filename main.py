@@ -460,7 +460,7 @@ quantity_total = tab_model.number_input("Enter Weekly Total Quantity", min_value
 
 user_input = pd.DataFrame({"quantity_original": quantity_original, "temperature": temperature, "temp_category": temp_category, "unit_price": unit_price, "day": day, "hour": hour, "quantity_total": quantity_total}, index=[0])
 
-if tab_model.button("Predict!"):
+if tab_model.button(":rainbow[Predict!]"):
     prediction = model.predict(user_input)
     tab_model.success(f"Estimated Stock Status : {prediction[0]}")
     tab_model.balloons()
