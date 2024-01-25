@@ -32,10 +32,10 @@ column_1.header(" :rainbow[Gala Groceries Project: Estimation of product stock f
 col1, col2, col3, col4, col5  = column_2.columns(5)
 
 with col1:
-   st.link_button(":violet[Miuul]", "https://www.miuul.com/")
+   st.link_button(":green[Miuul]", "https://www.miuul.com/")
 
 with col2:
-  st.link_button(":violet[euroTech]", "https://www.eurotechstudy.com/public/de")
+  st.link_button(":green[euroTech]", "https://www.eurotechstudy.com/public/de")
 
 with col3:
    st.metric(":thermometer: Temp", "-2 °C", "1.2 °C")
