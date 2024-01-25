@@ -25,7 +25,7 @@ def get_data2():
 
 
 column_1, column_2 = st.columns([2, 1], gap="large")
-column_1.header(" :rainbow[Gala Groceries Project: Estimation of product stock for a market]")
+column_1.header(" :rainbow[***Gala Groceries Project: Estimation of product stock for a market***]")
 
 
 
@@ -56,7 +56,7 @@ tab_home, tab_data, tab_vis, tab_model, tab_about = st.tabs(["🏠 Homepage", "�
 # column_one, column_two = st.columns([1, 2])
 column_one, column_two = tab_home.columns(2, gap="large")
 
-column_one.subheader("Inventory management at Gala supermarkets", divider="rainbow")
+column_one.subheader("***Inventory management at Gala supermarkets***", divider="rainbow")
 column_one.markdown("**Gala Supermarkets**, as a technology-driven grocery store chain, embraces a strategy of continuous\n"
                     "evolution and a commitment to innovation. ***Leyla Hanım***, serving as the branch manager of Gala\n"
                     "Supermarket in Germany, stands out as a dedicated leader with a focus on consistently providing\n"
@@ -69,16 +69,16 @@ column_one.markdown("Encountering a project-oriented approach, supported by data
                     "and temperature values within storage areas. This effort is directed towards achieving the objective\n"
                     "of optimizing product storage.")
 
-column_one.subheader("Project goal", divider="rainbow")
+column_one.subheader("***Project goal***", divider="rainbow")
 column_one.markdown("The goal of our project is to enable efficient sourcing from our suppliers by analyzing hourly sales data\n"
                     "and sensor signals. This ensures that products are maintained at an optimal level in our inventory.")
 
-column_one.subheader("Dataset and Analysis Process", divider="rainbow")
+column_one.subheader("***Dataset and Analysis Process***", divider="rainbow")
 column_one.markdown("To attain this objective, we amalgamated three distinct datasets encompassing details on cash transactions,\n"
                     "product inventories, and temperature values measured by sensors. During the data preparation and cleaning phase,\n"
                     "we rectified anomalies, ensuring the data was meticulously primed for analysis.")
 
-column_one.subheader("Development and Testing of the Model", divider="rainbow")
+column_one.subheader("***Development and Testing of the Model***", divider="rainbow")
 column_one.markdown("An essential phase of the project entailed crafting data science models to evaluate the connection between identified\n"
                    "factors and inventory management. This involved creating regression models through outlier analysis, standardization,\n"
                     "and utilization of the Scikit-learn library. Robust algorithms such as BayesianRidge were employed for optimal model selection.")
@@ -98,7 +98,7 @@ column_two.markdown("https://galasupermarkets.com/")
 
 # Tab Data
 column_a, column_b = tab_data.columns(2, gap="large")
-column_a.subheader("Columns", divider="rainbow")
+column_a.subheader("***Columns***", divider="rainbow")
 column_a.markdown("* transaction_id = this is a unique ID that is assigned to each transaction\n * timestamp = this is the datetime at which the transaction was made\n"
                      "* product_id = this is an ID that is assigned to the product that was sold. Each product has a unique ID\n * category = this is the category that the\n"
                      "product is contained within\n * customer_type = this is the type of customer that made the transaction\n * unit_price = the price that 1 unit of this\n"
@@ -138,20 +138,20 @@ for df in [sales, stock, temp]:
   df['hour'] = df['timestamp'].dt.hour
 
 
-column_a.subheader("Sample_Sales_Data", divider="rainbow")
+column_a.subheader("***Sample_Sales_Data***", divider="rainbow")
 column_a.dataframe(sales, width=900)
 
-column_b.subheader("Sensor_Stock_Levels", divider="rainbow")
+column_b.subheader("***Sensor_Stock_Levels***", divider="rainbow")
 column_b.dataframe(stock, width=900)
 
-column_b.subheader("Sensor_Storage_Temperature", divider="rainbow")
+column_b.subheader("***Sensor_Storage_Temperature***", divider="rainbow")
 column_b.dataframe(temp, width=900)
 
 
 
 # Tab Vis
 
-tab_vis.subheader("Chart 1", divider="rainbow")
+tab_vis.subheader("***Chart 1***", divider="rainbow")
 
 fig = px.bar(count_df, x="category", y="count", color="category",
              labels={"count": "Count"},
@@ -174,7 +174,7 @@ with tab_vis.expander("See explanation"):
 
 
 
-tab_vis.subheader("Chart 2", divider="rainbow")
+tab_vis.subheader("***Chart 2***", divider="rainbow")
 
 cat_total_df =  sales.groupby("category")["total"].sum().reset_index()
 cat_total_df.columns = ["category", "total"]
@@ -201,7 +201,7 @@ with tab_vis.expander("See explanation"):
 
 
 
-tab_vis.subheader("Chart 3", divider="rainbow")
+tab_vis.subheader("***Chart 3***", divider="rainbow")
 
 sales_hour = sales[["hour", "quantity"]]
 sales_hour_df = sales_hour.groupby("hour")["quantity"].sum().reset_index()
@@ -246,7 +246,7 @@ with tab_vis.expander("See explanation"):
 #tab_vis.plotly_chart(fig)
 
 
-tab_vis.subheader("Chart4", divider="rainbow")
+tab_vis.subheader("***Chart4***", divider="rainbow")
 
 sales_hour = sales[["hour", "quantity", "category"]]
 sales_hour_df = sales_hour.groupby(["hour", "category"])["quantity"].sum().reset_index()
@@ -275,7 +275,7 @@ with tab_vis.expander("See explanation"):
 
 
 
-tab_vis.subheader("Chart 5", divider="rainbow")
+tab_vis.subheader("***Chart 5***", divider="rainbow")
 
 
 sales_total = sales[["hour", "total"]]
@@ -303,9 +303,7 @@ with tab_vis.expander("See explanation"):
 
 
 
-
-
-tab_vis.subheader("Chart 6", divider="rainbow")
+tab_vis.subheader("***Chart 6***", divider="rainbow")
 
 sls = sales[["product_id", "category"]]
 stck = stock.merge(sls, on="product_id", how="left")
@@ -384,7 +382,7 @@ with tab_vis.expander("See explanation"):
 #tab_vis.plotly_chart(fig)
 
 
-tab_vis.subheader("Chart 7", divider="rainbow")
+tab_vis.subheader("***Chart 7***", divider="rainbow")
 # Hourly Stock Estimated Stock Percentage
 
 stock_hour2 = stck[["hour", "estimated_stock_pct"]]
@@ -414,7 +412,7 @@ with tab_vis.expander("See explanation"):
 
 
 
-tab_vis.subheader("Chart 8", divider="rainbow")
+tab_vis.subheader("***Chart 8***", divider="rainbow")
 
 tmp = temp.drop("id", axis=1)
 
@@ -468,7 +466,7 @@ if tab_model.button(":rainbow[Predict!]"):
 
 # Tab About:
 
-tab_about.subheader(" :rainbow[About Us]")
+tab_about.subheader(" :rainbow[***About Us***]")
 tab_about.markdown("As participants of the **EuroTech Study** & **Miuul** Data Science and Machine Learning Bootcamp, we\n"
                    "have come together to venture into the world of data science and machine learning. Throughout the\n"
                    "training period, we solidified our knowledge by working on real-world projects. With this final project,\n"
@@ -489,21 +487,21 @@ tab_about.markdown("<br><br><br><br><br><br><br>", unsafe_allow_html=True)
 co1, co2, co3, co4, co5  = tab_about.columns(5)
 
 with co1:
-   st.image("Betül Karagöz1.jpg", "***Betül Karagöz***", width=130)
+   st.image("Betül Karagöz1.jpg", "Betül Karagöz", width=130)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/betül-karagöz/")
 
 with co2:
-  st.image("Bilal Özdemir1.jpg", "***Bilal Özdemir***", width=140)
+  st.image("Bilal Özdemir1.jpg", "Bilal Özdemir", width=140)
   st.link_button("LinkedIn", "https://www.linkedin.com/in/bilal-%C3%B6zdemir-0a5b58287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app")
 
 with co3:
-   st.image("Cemil Öksüz.jpg", "***Cemil Öksüz***", width=150)
+   st.image("Cemil Öksüz.jpg", "Cemil Öksüz", width=150)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/cemil-oksuz/")
 
 with co4:
-   st.image("Ercan Tayfun1.jpg", "***Ercan Tayfun***", width=160)
+   st.image("Ercan Tayfun1.jpg", "Ercan Tayfun", width=160)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/e-tayfun/")
 
 with co5:
-   st.image("Naime Diler1.jpg", "***Naime Diler***", width=230)
+   st.image("Naime Diler1.jpg", "Naime Diler", width=230)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/naime-diler/")
