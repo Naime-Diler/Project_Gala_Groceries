@@ -112,9 +112,7 @@ df_temp = get_data2()
 
 
 
-# for chart 1:
-count_df = df.category.value_counts().reset_index()
-count_df.columns = ["category", "count"]
+
 
 
 
@@ -151,6 +149,10 @@ column1_iki.dataframe(temp, width=900)
 # Tab Vis
 
 tab_vis.subheader("Chart 1", divider="rainbow")
+
+# for chart 1:
+count_df = df.category.value_counts().reset_index()
+count_df.columns = ["category", "count"]
 
 fig = px.bar(count_df, x="category", y="count", color="category",
              labels={"count": "Count"},
