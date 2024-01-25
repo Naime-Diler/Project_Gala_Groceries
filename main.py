@@ -308,7 +308,7 @@ stock_hour_df = stock_hour.groupby(["hour", "category"])["estimated_stock_pct"].
 
 fig = px.bar(stock_hour_df, x="hour", y="estimated_stock_pct", color="category",
              labels={"estimated_stock_pct": "estimated_stock_pct"},
-             title="Hourly Stock estimated_stock_pct by Category",
+             title="Stock Percentage by Hour and Category",
              text="estimated_stock_pct",
              width=1000, height=600,
              color_discrete_sequence=px.colors.qualitative.Set3)
