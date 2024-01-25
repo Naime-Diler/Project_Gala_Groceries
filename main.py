@@ -51,54 +51,55 @@ with col5:
 tab_home, tab_data, tab_vis, tab_model, tab_about = st.tabs(["🏠 Homepage", "📂 Datasets", "📈 Charts", "🤖 Model", "📄 About"])
 
 # Tab home
-# column_bir, column_iki = st.columns(2)
-# column_bir, column_iki = st.columns([1, 2])
-column_bir, column_iki = tab_home.columns(2, gap="large")
 
-column_bir.subheader("Inventory management at Gala supermarkets", divider="rainbow")
-column_bir.markdown("Gala Supermarkets, as a technology-driven grocery store chain, embraces a strategy of continuous\n"
+# column_one, column_two = st.columns(2)
+# column_one, column_two = st.columns([1, 2])
+column_one, column_two = tab_home.columns(2, gap="large")
+
+column_one.subheader("Inventory management at Gala supermarkets", divider="rainbow")
+column_one.markdown("Gala Supermarkets, as a technology-driven grocery store chain, embraces a strategy of continuous\n"
                     "evolution and a commitment to innovation. Leyla Hanım, serving as the branch manager of Gala\n"
                     "Supermarket in Germany, stands out as a dedicated leader with a focus on consistently providing\n"
                     "customers with the highest quality and freshest products.") 
 
-column_bir.markdown("Encountering a project-oriented approach, supported by data science and machine learning, has\n"
+column_one.markdown("Encountering a project-oriented approach, supported by data science and machine learning, has\n"
                     "captured our interest. Leyla Hanım's notable willingness to devise innovative solutions for\n"
                     "challenges in the supply chain has left a lasting impression. Throughout this project, our focus\n"
                     "has been on analyzing pertinent datasets, including sales data, sensor-derived inventory information,\n"
                     "and temperature values within storage areas. This effort is directed towards achieving the objective\n"
                     "of optimizing product storage.")
 
-column_bir.subheader("Project goal", divider="rainbow")
-column_bir.markdown("The goal of our project is to enable efficient sourcing from our suppliers by analyzing hourly sales data\n"
+column_one.subheader("Project goal", divider="rainbow")
+column_one.markdown("The goal of our project is to enable efficient sourcing from our suppliers by analyzing hourly sales data\n"
                     "and sensor signals. This ensures that products are maintained at an optimal level in our inventory.")
 
-column_bir.subheader("Dataset and Analysis Process", divider="rainbow")
-column_bir.markdown("To attain this objective, we amalgamated three distinct datasets encompassing details on cash transactions,\n"
+column_one.subheader("Dataset and Analysis Process", divider="rainbow")
+column_one.markdown("To attain this objective, we amalgamated three distinct datasets encompassing details on cash transactions,\n"
                     "product inventories, and temperature values measured by sensors. During the data preparation and cleaning phase,\n"
                     "we rectified anomalies, ensuring the data was meticulously primed for analysis.")
 
-column_bir.subheader("Development and Testing of the Model", divider="rainbow")
-column_bir.markdown("An essential phase of the project entailed crafting data science models to evaluate the connection between identified\n"
+column_one.subheader("Development and Testing of the Model", divider="rainbow")
+column_one.markdown("An essential phase of the project entailed crafting data science models to evaluate the connection between identified\n"
                    "factors and inventory management. This involved creating regression models through outlier analysis, standardization,\n"
                     "and utilization of the Scikit-learn library. Robust algorithms such as BayesianRidge were employed for optimal model selection.")
                     
 
 
-column_iki.markdown("The project significantly enhances the efficiency of Gala Supermarkets' supply chain processes under the guidance of Leyla Hanım.\n"
+column_two.markdown("The project significantly enhances the efficiency of Gala Supermarkets' supply chain processes under the guidance of Leyla Hanım.\n"
                     "This ensures the team is well-prepared for forthcoming challenges.")
 
-column_iki.markdown("<br><br>", unsafe_allow_html=True)
+column_two.markdown("<br><br>", unsafe_allow_html=True)
 
 
-column_iki.image("WhatsApp Bild 2024-01-11 um 12.14.47_dd58d66a.jpg", width=820)
-column_iki.markdown("https://galasupermarkets.com/")
+column_two.image("WhatsApp Bild 2024-01-11 um 12.14.47_dd58d66a.jpg", width=820)
+column_two.markdown("https://galasupermarkets.com/")
 
 
 
 # Tab Data
-column1_bir, column1_iki = tab_data.columns(2, gap="large")
-column1_bir.subheader("Columns", divider="rainbow")
-column1_bir.markdown("* transaction_id = this is a unique ID that is assigned to each transaction\n * timestamp = this is the datetime at which the transaction was made\n"
+column_a, column_b = tab_data.columns(2, gap="large")
+column_a.subheader("Columns", divider="rainbow")
+column_a.markdown("* transaction_id = this is a unique ID that is assigned to each transaction\n * timestamp = this is the datetime at which the transaction was made\n"
                      "* product_id = this is an ID that is assigned to the product that was sold. Each product has a unique ID\n * category = this is the category that the\n"
                      "product is contained within\n * customer_type = this is the type of customer that made the transaction\n * unit_price = the price that 1 unit of this\n"
                      "item sells for\n * quantity = the number of units sold for this product within this transaction\n * total = the total amount payable by the customer\n"
@@ -137,14 +138,14 @@ for df in [sales, stock, temp]:
   df['hour'] = df['timestamp'].dt.hour
 
 
-column1_bir.subheader("Sample_Sales_Data", divider="rainbow")
-column1_bir.dataframe(sales, width=900)
+column_a.subheader("Sample_Sales_Data", divider="rainbow")
+column_a.dataframe(sales, width=900)
 
-column1_iki.subheader("Sensor_Stock_Levels", divider="rainbow")
-column1_iki.dataframe(stock, width=900)
+column_b.subheader("Sensor_Stock_Levels", divider="rainbow")
+column_b.dataframe(stock, width=900)
 
-column1_iki.subheader("Sensor_Storage_Temperature", divider="rainbow")
-column1_iki.dataframe(temp, width=900)
+column_b.subheader("Sensor_Storage_Temperature", divider="rainbow")
+column_b.dataframe(temp, width=900)
 
 
 
@@ -173,7 +174,7 @@ with tab_vis.expander("See explanation"):
 
 
 
-tab_vis.subheader("Chart 5", divider="rainbow")
+tab_vis.subheader("Chart 2", divider="rainbow")
 
 cat_total_df =  sales.groupby("category")["total"].sum().reset_index()
 cat_total_df.columns = ["category", "total"]
@@ -200,7 +201,7 @@ with tab_vis.expander("See explanation"):
 
 
 
-tab_vis.subheader("Chart 2", divider="rainbow")
+tab_vis.subheader("Chart 3", divider="rainbow")
 
 sales_hour = sales[["hour", "quantity"]]
 sales_hour_df = sales_hour.groupby("hour")["quantity"].sum().reset_index()
@@ -226,6 +227,7 @@ with tab_vis.expander("See explanation"):
 
 
 
+
 #tab_vis.subheader("Chart 3", divider="rainbow")
 
 #sales_hour = sales[["hour", "quantity", "category"]]
@@ -244,7 +246,7 @@ with tab_vis.expander("See explanation"):
 #tab_vis.plotly_chart(fig)
 
 
-tab_vis.subheader("Chart 3", divider="rainbow")
+tab_vis.subheader("Chart4", divider="rainbow")
 
 sales_hour = sales[["hour", "quantity", "category"]]
 sales_hour_df = sales_hour.groupby(["hour", "category"])["quantity"].sum().reset_index()
@@ -271,7 +273,9 @@ with tab_vis.expander("See explanation"):
 
 
 
-tab_vis.subheader("Chart 4", divider="rainbow")
+
+
+tab_vis.subheader("Chart 5", divider="rainbow")
 
 
 sales_total = sales[["hour", "total"]]
@@ -448,7 +452,7 @@ model = get_model()
 
 quantity_original = tab_model.number_input("Enter Quantity", min_value = 1, max_value = 4, step=1 ,value = 1)
 temp_category = tab_model.number_input("Enter Category :  1: (-36°C to -16°C) # 2: (-16°C to 0°C) # 3: (0°C to 15°C) # 4: (15°C to 19°C) # 5: (19°C to 36°C)", min_value = 1, max_value = 5, step=1 ,value = 1)
-temperature = tab_model.number_input("Enter Temperature : Attention: Enter the temperature suitable for the category you selected!", min_value = -36, max_value = 36, step=1 ,value = 0)
+temperature = tab_model.number_input("Enter Temperature : :red[Attention:] Enter the temperature suitable for the category you selected!", min_value = -36, max_value = 36, step=1 ,value = 0)
 unit_price = tab_model.number_input("Enter Unit Price", min_value = 0.0, max_value = 24.0, step=0.01 ,value = 0.0)
 day = tab_model.number_input("Enter Day: (0: Tuesday) # (1: Wednesday) # (2: Thursday) # (3: Friday) # (4: Saturday) # (5: Sunday) # (6: Monday)", min_value = 0, max_value = 6, step=1, value = 0)
 hour = tab_model.number_input("Enter Hour", min_value = 9, max_value = 19, step=1 ,value = 9)
