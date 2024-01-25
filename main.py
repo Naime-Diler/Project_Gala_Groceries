@@ -481,7 +481,7 @@ tab_about.markdown("On this journey, we would like to express our heartfelt grat
 
 
 
-tab_about.markdown("<br><br><br><br><br><br><br>", unsafe_allow_html=True)
+tab_about.markdown("<br><br><br><br><br><br>", unsafe_allow_html=True)
 
 
 co1, co2, co3, co4, co5  = tab_about.columns(5)
