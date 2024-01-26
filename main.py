@@ -493,9 +493,9 @@ with co3:
    st.link_button("LinkedIn", "https://www.linkedin.com/in/cemil-oksuz/")
 
 with co4:
-   st.image("Ercan Tayfun.jpg", "Ercan Tayfun", width=140)
+   st.image("Ercan Tayfun.jpg", "Ercan Tayfun", width=160)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/e-tayfun/")
 
 with co5:
-   st.image("Naime Diler.jpg", "Naime Diler", width=230)
+   st.image("Naime Diler.jpg", "Naime Diler", width=190)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/naime-diler/")
