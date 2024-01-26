@@ -177,14 +177,13 @@ with tab_vis.expander("See explanation"):
 
 
 #2
-tab_vis.subheader("Chart 2", divider="rainbow")
+tab_vis.subheader("2. Categorical Sales Total", divider="rainbow")
 
 cat_total_df =  sales.groupby("category")["total"].sum().reset_index()
 cat_total_df.columns = ["category", "total"]
 
 fig = px.bar(cat_total_df, x="category", y="total", color="category",
              labels={"total": "Total"},
-             title="Categorical Sales Total",
              text="total",
              width=800, height=600,
              color_discrete_sequence=px.colors.qualitative.Set3)
@@ -204,14 +203,13 @@ with tab_vis.expander("See explanation"):
 
 
 #3
-tab_vis.subheader("Chart 3", divider="rainbow")
+tab_vis.subheader("3. Hourly Sales Quantity", divider="rainbow")
 
 sales_hour = sales[["hour", "quantity"]]
 sales_hour_df = sales_hour.groupby("hour")["quantity"].sum().reset_index()
 
 fig = px.bar(sales_hour_df, x="hour", y="quantity", color="hour",
              labels={"quantity": "Quantity"},
-             title="Hourly Sales Quantity",
              text="quantity",
              width=800, height=600,
              color_discrete_sequence=px.colors.qualitative.Set3)
@@ -231,7 +229,7 @@ with tab_vis.expander("See explanation"):
 
 
 
-#tab_vis.subheader("Chart 3", divider="rainbow")
+#tab_vis.subheader("Hourly Sales Quantity by Category", divider="rainbow")
 
 #sales_hour = sales[["hour", "quantity", "category"]]
 #sales_hour_df = sales_hour.groupby(["hour", "category"])["quantity"].sum().reset_index()
@@ -239,7 +237,6 @@ with tab_vis.expander("See explanation"):
 
 #fig = px.line(sales_hour_df, x="hour", y="quantity", color="category",
  #            labels={"quantity": "Quantity"},
-  #           title="Hourly Sales Quantity by Category",
    #          text="quantity",
     #         width=1800, height=600,
      #        color_discrete_sequence=px.colors.qualitative.Set3)
@@ -249,8 +246,10 @@ with tab_vis.expander("See explanation"):
 #tab_vis.plotly_chart(fig)
 
 
+
+
 #4
-tab_vis.subheader("Chart 4", divider="rainbow")
+tab_vis.subheader("4. Hourly Sales Quantity by Category", divider="rainbow")
 
 sales_hour = sales[["hour", "quantity", "category"]]
 sales_hour_df = sales_hour.groupby(["hour", "category"])["quantity"].sum().reset_index()
@@ -258,7 +257,6 @@ sales_hour_df = sales_hour.groupby(["hour", "category"])["quantity"].sum().reset
 
 fig = px.bar(sales_hour_df, x="hour", y="quantity", color="category",
              labels={"quantity": "Quantity"},
-             title="Hourly Sales Quantity by Category",
              text="quantity",
              width=1800, height=600,
              color_discrete_sequence=px.colors.qualitative.Set3)
@@ -279,14 +277,13 @@ with tab_vis.expander("See explanation"):
 
 
 #5
-tab_vis.subheader("Chart 5", divider="rainbow")
+tab_vis.subheader("5. Hourly Sales Total", divider="rainbow")
 
 sales_total = sales[["hour", "total"]]
 sales_total_df = sales_total.groupby("hour")["total"].sum().reset_index()
 
 fig = px.bar(sales_total_df, x="hour", y="total", color="hour",
              labels={"total": "Total"},
-             title="Hourly Sales Total",
              text="total",
              width=800, height=600,
              color_discrete_sequence=px.colors.qualitative.Set3)
@@ -306,7 +303,7 @@ with tab_vis.expander("See explanation"):
 
 
 #6
-tab_vis.subheader("Chart 6", divider="rainbow")
+tab_vis.subheader("6. Stock Percentage by Hour and Category", divider="rainbow")
 
 sls = sales[["product_id", "category"]]
 stck = stock.merge(sls, on="product_id", how="left")
@@ -314,14 +311,11 @@ stck = stck.drop_duplicates()
 stck = stck.drop("id", axis=1)
 
 
-# Hourly Stock estimated_stock_pct by Category
-
 stock_hour = stck[["hour", "estimated_stock_pct", "category"]]
 stock_hour_df = stock_hour.groupby(["hour", "category"])["estimated_stock_pct"].mean().reset_index()
 
 fig = px.bar(stock_hour_df, x="hour", y="estimated_stock_pct", color="category",
              labels={"estimated_stock_pct": "estimated_stock_pct"},
-             title="Stock Percentage by Hour and Category",
              text="estimated_stock_pct",
              width=1000, height=600,
              color_discrete_sequence=px.colors.qualitative.Set3)
@@ -340,7 +334,7 @@ with tab_vis.expander("See explanation"):
 
 
 
-#tab_vis.subheader("Chart 8", divider="rainbow")
+#tab_vis.subheader("8. Hourly Stock Estimated Stock Percentage by Category", divider="rainbow")
 
 #stock_hour = stck[["hour", "estimated_stock_pct", "category"]]
 #stock_hour_df = stock_hour.groupby(["hour", "category"])["estimated_stock_pct"].mean().reset_index()
@@ -348,7 +342,6 @@ with tab_vis.expander("See explanation"):
 
 #fig = px.line(stock_hour_df, x="hour", y="estimated_stock_pct", color="category",
  #             labels={"estimated_stock_pct": "Estimated Stock Percentage"},
- #             title="Hourly Stock Estimated Stock Percentage by Category",
   #            width=1800, height=600,
   #            color_discrete_sequence=px.colors.qualitative.Set2)
 
@@ -356,14 +349,13 @@ with tab_vis.expander("See explanation"):
 #fig.update_layout(
  #   xaxis_title="Hour",
  #   yaxis_title="Estimated Stock Percentage",
- #   legend_title="Category",
-#)
+ #   legend_title="Category")
 
 # tab_vis.plotly_chart(fig)
 
 
 
-#tab_vis.subheader("Chart 9", divider="rainbow")
+#tab_vis.subheader("Hourly Stock Estimated Stock Percentage", divider="rainbow")
 
 #stock_hour2 = stck[["hour", "estimated_stock_pct"]]
 #stock_hour2_df = stock_hour2.groupby(["hour"])["estimated_stock_pct"].mean().reset_index()
@@ -384,7 +376,7 @@ with tab_vis.expander("See explanation"):
 
 
 #7
-tab_vis.subheader("Chart 7", divider="rainbow")
+tab_vis.subheader("7. Hourly Stock Estimated Stock Percentage", divider="rainbow")
 
 stock_hour2 = stck[["hour", "estimated_stock_pct"]]
 stock_hour2_df = stock_hour2.groupby(["hour"])["estimated_stock_pct"].mean().reset_index()
@@ -392,7 +384,7 @@ stock_hour2_df = stock_hour2.groupby(["hour"])["estimated_stock_pct"].mean().res
 
 fig = px.line(stock_hour2_df, x="hour", y="estimated_stock_pct",
               labels={"estimated_stock_pct": "Estimated Stock Percentage"},
-              title="Hourly Stock Estimated Stock Percentage ",
+              title="Hourly Stock Estimated Stock Percentage",
               text ="estimated_stock_pct",
               width=1800, height=600,
               color_discrete_sequence=px.colors.qualitative.Set2)
@@ -414,7 +406,7 @@ with tab_vis.expander("See explanation"):
 
 
 #8
-tab_vis.subheader("Chart 8", divider="rainbow")
+tab_vis.subheader("8. Categorical Temperature", divider="rainbow")
 
 tmp = temp.drop("id", axis=1)
 
@@ -425,7 +417,6 @@ cat_temp = tmp.groupby(["temp_category", "hour"])["temperature"].mean().reset_in
 
 fig = px.line(cat_temp, x="hour", y="temperature", color="temp_category",
              labels={"temperature": "Temperature"},
-             title="Categorical Temperature",
              text="temperature",
              width=1000, height=600,
              color_discrete_sequence=px.colors.qualitative.Set3)
