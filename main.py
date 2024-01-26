@@ -471,7 +471,7 @@ if tab_model.button(":rainbow[Predict!]"):
 ########## Tab About ##########
 
 tab_about.subheader(" :rainbow[About Us]")
-tab_about.markdown("As participants of the **EuroTech Study** & **Miuul** Data Science and Machine Learning Bootcamp, we\n"
+tab_about.markdown("As participants of the **EuroTech Study** & **Miuul** ***Data Science and Machine Learning Bootcamp***, we\n"
                    "have come together to venture into the world of data science and machine learning. Throughout the\n"
                    "training period, we solidified our knowledge by working on real-world projects. With this final project,\n"
                    "we showcase the outcomes of our bootcamp program, concluding this significant phase. Armed with the acquired\n"
