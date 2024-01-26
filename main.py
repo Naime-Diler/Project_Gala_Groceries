@@ -155,7 +155,7 @@ column_b.dataframe(temp, width=900)
 
 ########## Tab Vis ##########
 #1
-tab_vis.subheader("1. "Categorical Sales Count"", divider="rainbow")
+tab_vis.subheader("1. Categorical Sales Count", divider="rainbow")
 
 fig = px.bar(count_df, x="category", y="count", color="category",
              labels={"count": "Count"},
