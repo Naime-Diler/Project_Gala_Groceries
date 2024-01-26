@@ -83,7 +83,7 @@ column_one.markdown("To attain this objective, we amalgamated three distinct dat
 column_one.subheader("Development and Testing of the Model", divider="rainbow")
 column_one.markdown("An essential phase of the project entailed crafting data science models to evaluate the connection between identified\n"
                    "factors and inventory management. This involved creating regression models through outlier analysis, standardization,\n"
-                    "and utilization of the Scikit-learn library. Robust algorithms such as BayesianRidge were employed for optimal model selection.")
+                    "and utilization of the **Scikit-learn** library. Robust algorithms such as **BayesianRidge** were employed for optimal model selection.")
                     
 
 
@@ -155,11 +155,10 @@ column_b.dataframe(temp, width=900)
 
 ########## Tab Vis ##########
 #1
-tab_vis.subheader("Chart 1", divider="rainbow")
+tab_vis.subheader("1. "Categorical Sales Count"", divider="rainbow")
 
 fig = px.bar(count_df, x="category", y="count", color="category",
              labels={"count": "Count"},
-             title="Categorical Sales Count",
              text="count",
              width=1000, height=600,
              color_discrete_sequence=px.colors.qualitative.Set3)
@@ -491,11 +490,11 @@ tab_about.markdown("<br><br><br><br><br><br>", unsafe_allow_html=True)
 co1, co2, co3, co4, co5  = tab_about.columns(5)
 
 with co1:
-   st.image("Betül Karagöz1.jpg", "Betül Karagöz", width=130)
+   st.image("Betül Karagöz.jpg", "Betül Karagöz", width=130)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/betül-karagöz/")
 
 with co2:
-  st.image("Bilal Özdemir1.jpg", "Bilal Özdemir", width=140)
+  st.image("Bilal Özdemir.jpg", "Bilal Özdemir", width=140)
   st.link_button("LinkedIn", "https://www.linkedin.com/in/bilal-%C3%B6zdemir-0a5b58287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app")
 
 with co3:
@@ -503,9 +502,9 @@ with co3:
    st.link_button("LinkedIn", "https://www.linkedin.com/in/cemil-oksuz/")
 
 with co4:
-   st.image("Ercan Tayfun1.jpg", "Ercan Tayfun", width=160)
+   st.image("Ercan Tayfun.jpg", "Ercan Tayfun", width=160)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/e-tayfun/")
 
 with co5:
-   st.image("Naime Diler1.jpg", "Naime Diler", width=230)
+   st.image("Naime Diler.jpg", "Naime Diler", width=230)
    st.link_button("LinkedIn", "https://www.linkedin.com/in/naime-diler/")
