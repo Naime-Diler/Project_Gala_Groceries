@@ -25,7 +25,7 @@ def get_data2():
 
 
 column_1, column_2 = st.columns([2, 1], gap="large")
-column_1.header(" :rainbow[Gala Groceries Project: Estimation of product stock for a market]")
+column_1.header(":rainbow[Gala Groceries Project: Estimation of product stock for a market]")
 
 
 
@@ -50,7 +50,9 @@ with col5:
 
 tab_home, tab_data, tab_vis, tab_model, tab_about = st.tabs(["🏠 Homepage", "📂 Datasets", "📈 Charts", "🤖 Model", "📄 About"])
 
-# Tab home
+
+
+########### Tab home ##########
 
 # column_one, column_two = st.columns(2)
 # column_one, column_two = st.columns([1, 2])
@@ -96,7 +98,7 @@ column_two.markdown("https://galasupermarkets.com/")
 
 
 
-# Tab Data
+########## Tab Data ##########
 column_a, column_b = tab_data.columns(2, gap="large")
 column_a.subheader("Columns", divider="rainbow")
 column_a.markdown("* transaction_id = this is a unique ID that is assigned to each transaction\n * timestamp = this is the datetime at which the transaction was made\n"
@@ -112,11 +114,11 @@ df_stock = get_data1()
 df_temp = get_data2()
 
 
-
-# for chart 1:
+######################################################
+# for chart 1 (See: Tab Vis):
 count_df = df.category.value_counts().reset_index()
 count_df.columns = ["category", "count"]
-
+######################################################
 
 
 def loading_data ():
@@ -128,6 +130,7 @@ def loading_data ():
 
 sales, stock, temp =loading_data()
 
+
 for df in [sales, stock, temp]:
 
   df.drop("Unnamed: 0", axis=1, inplace=True)
@@ -136,6 +139,7 @@ for df in [sales, stock, temp]:
   df['month'] = df['timestamp'].dt.month
   df['day'] = df['timestamp'].dt.day
   df['hour'] = df['timestamp'].dt.hour
+    
 
 
 column_a.subheader("Sample_Sales_Data", divider="rainbow")
@@ -149,8 +153,8 @@ column_b.dataframe(temp, width=900)
 
 
 
-# Tab Vis
-
+########## Tab Vis ##########
+#1
 tab_vis.subheader("Chart 1", divider="rainbow")
 
 fig = px.bar(count_df, x="category", y="count", color="category",
@@ -173,7 +177,7 @@ with tab_vis.expander("See explanation"):
 
 
 
-
+#2
 tab_vis.subheader("Chart 2", divider="rainbow")
 
 cat_total_df =  sales.groupby("category")["total"].sum().reset_index()
@@ -200,7 +204,7 @@ with tab_vis.expander("See explanation"):
 
 
 
-
+#3
 tab_vis.subheader("Chart 3", divider="rainbow")
 
 sales_hour = sales[["hour", "quantity"]]
@@ -246,6 +250,7 @@ with tab_vis.expander("See explanation"):
 #tab_vis.plotly_chart(fig)
 
 
+#4
 tab_vis.subheader("Chart 4", divider="rainbow")
 
 sales_hour = sales[["hour", "quantity", "category"]]
@@ -274,9 +279,8 @@ with tab_vis.expander("See explanation"):
 
 
 
-
+#5
 tab_vis.subheader("Chart 5", divider="rainbow")
-
 
 sales_total = sales[["hour", "total"]]
 sales_total_df = sales_total.groupby("hour")["total"].sum().reset_index()
@@ -302,7 +306,7 @@ with tab_vis.expander("See explanation"):
 
 
 
-
+#6
 tab_vis.subheader("Chart 6", divider="rainbow")
 
 sls = sales[["product_id", "category"]]
@@ -335,9 +339,9 @@ with tab_vis.expander("See explanation"):
              "exact values are displayed as text on their respective columns.")
 
 
-#tab_vis.subheader("Chart 8", divider="rainbow")
 
-# Hourly Stock Estimated Stock Percentage by Category
+
+#tab_vis.subheader("Chart 8", divider="rainbow")
 
 #stock_hour = stck[["hour", "estimated_stock_pct", "category"]]
 #stock_hour_df = stock_hour.groupby(["hour", "category"])["estimated_stock_pct"].mean().reset_index()
@@ -362,8 +366,6 @@ with tab_vis.expander("See explanation"):
 
 #tab_vis.subheader("Chart 9", divider="rainbow")
 
-# Hourly Stock Estimated Stock Percentage
-
 #stock_hour2 = stck[["hour", "estimated_stock_pct"]]
 #stock_hour2_df = stock_hour2.groupby(["hour"])["estimated_stock_pct"].mean().reset_index()
 
@@ -382,8 +384,8 @@ with tab_vis.expander("See explanation"):
 #tab_vis.plotly_chart(fig)
 
 
+#7
 tab_vis.subheader("Chart 7", divider="rainbow")
-# Hourly Stock Estimated Stock Percentage
 
 stock_hour2 = stck[["hour", "estimated_stock_pct"]]
 stock_hour2_df = stock_hour2.groupby(["hour"])["estimated_stock_pct"].mean().reset_index()
@@ -412,6 +414,7 @@ with tab_vis.expander("See explanation"):
 
 
 
+#8
 tab_vis.subheader("Chart 8", divider="rainbow")
 
 tmp = temp.drop("id", axis=1)
@@ -441,7 +444,7 @@ with tab_vis.expander("See explanation"):
 
 
 
-# Tab Model
+########## Tab Model ##########
 def get_model():
     model = joblib.load("final_model_bys.joblib")
     return model
@@ -464,7 +467,8 @@ if tab_model.button(":rainbow[Predict!]"):
     tab_model.balloons()
 
 
-# Tab About:
+
+########## Tab About ##########
 
 tab_about.subheader(" :rainbow[About Us]")
 tab_about.markdown("As participants of the **EuroTech Study** & **Miuul** Data Science and Machine Learning Bootcamp, we\n"
