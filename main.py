@@ -39,7 +39,7 @@ with col2:
   st.link_button(":orange[euroTech]", "https://www.eurotechstudy.com/public/de")
 
 with col3:
-   st.metric(":thermometer: Temp", "7 °C", "1.2 °C")
+   st.metric(":thermometer: Temp", "10 °C", "1.2 °C")
 
 with col4:
    st.metric(":wind_blowing_face: Wind", "9 mph", "-8%")
